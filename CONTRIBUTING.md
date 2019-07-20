@@ -3,16 +3,16 @@
 
 ## Issues
 このノートに関するご指摘やご質問，ご提案はGitHub上で受け付けています．GitHubリポジトリのIssueとしてあなたの疑問を報告したり，アイデアを提案できます．
-- ノートの内容に関する質問やご指摘 => [こちら]()から
-- ノートのバグや問題の報告 => [こちら]()から
-- 既存の内容に関する提案 => [こちら]()から
-- 新しいトピックなどの提案 => [こちら]()から ※下記セクション「Features coming soon」も参照してください．
-- その他のIssue => [こちら]()から
+- ノートの内容に関する質問やご指摘 => [こちら](https://github.com/mokamotosan/pca_notes_matlab/issues/new?assignees=&labels=question&template=question.md&title=)から
+- ノートのバグや問題の報告 => [こちら](https://github.com/mokamotosan/pca_notes_matlab/issues/new?assignees=&labels=bug&template=bug_report.md&title=)から
+- 既存の内容に関する提案 => [こちら](https://github.com/mokamotosan/pca_notes_matlab/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=)から
+- 新しいトピックなどの提案 => [こちら](https://github.com/mokamotosan/pca_notes_matlab/issues/new?assignees=&labels=enhancement&template=new-feature-request.md&title=)から ※下記セクション「Features coming soon」も参照してください．
+- その他のIssue => [こちら](https://github.com/mokamotosan/pca_notes_matlab/issues/new?assignees=&labels=&template=others.md&title=)から
 
 ### Features coming soon
-このノートには今後，以下のような機能を追加する予定です．それぞれに関する報告や提案は専用のIssueから行うことができます．
-- 演習課題の追加 => ご指摘や提案は[こちら]()から
-- MATLAB Graderへの対応 => ご指摘や提案は[こちら]()から
+このノートには今後，以下のような機能を追加する予定です．
+- 演習課題の追加
+- MATLAB Graderへの対応
 
 ## Pull Request
 ご自身の修正をノートに反映させるためにはPull Requestを行ってください．Pull Requestはいつでも歓迎しています．次の種類のPull Requestを受け付けています。
@@ -26,7 +26,7 @@
 
 ### Pull Requestの送り方
 Pull Requestは以下のステップで行うことができます．
-1. Fork it ( http://github.com/username/projectname/forks )
+1. Fork it (https://github.com/mokamotosan/pca_notes_matlab/)
 2. Create your feature branch (git checkout -b my-new-feature)
 3. Commit your changes (git commit -am 'Add some feature')
 4. Push to the branch (git push origin my-new-feature)
