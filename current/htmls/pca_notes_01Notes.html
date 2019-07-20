@@ -1,0 +1,570 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,IE=9,chrome=1"><meta name="generator" content="MATLAB R2019a"><title>諸注意事項</title><style type="text/css">.rtcContent { padding: 30px; } .S0 { margin: 3px 10px 5px 4px; padding: 0px; line-height: 28.7999992370605px; min-height: 0px; white-space: pre-wrap; color: rgb(213, 80, 0); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 24px; font-weight: normal; text-align: left;  }
+.S1 { margin: 3px 10px 5px 4px; padding: 0px; line-height: 20px; min-height: 0px; white-space: pre-wrap; color: rgb(60, 60, 60); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 20px; font-weight: bold; text-align: left;  }
+.S2 { margin: 2px 10px 9px 4px; padding: 0px; line-height: 21px; min-height: 0px; white-space: pre-wrap; color: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 14px; font-weight: normal; text-align: left;  }
+.S3 { margin: 10px 0px 20px; padding-left: 0px; font-family: Helvetica, Arial, sans-serif; font-size: 14px;  }
+.S4 { margin-left: 56px; line-height: 21px; min-height: 0px; text-align: left; white-space: pre-wrap;  }
+.CodeBlock { background-color: #F7F7F7; margin: 10px 0 10px 0;}
+.S5 { border-left: 1.20481932163239px solid rgb(233, 233, 233); border-right: 1.20481932163239px solid rgb(233, 233, 233); border-top: 1.20481932163239px solid rgb(233, 233, 233); border-bottom: 1.20481932163239px solid rgb(233, 233, 233); border-radius: 4px; padding: 6px 45px 4px 13px; line-height: 17.2339992523193px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px;  }
+.S6 { margin: 10px 10px 9px 4px; padding: 0px; line-height: 21px; min-height: 0px; white-space: pre-wrap; color: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 14px; font-weight: normal; text-align: left;  }
+.S7 { margin: 15px 10px 5px 4px; padding: 0px; line-height: 18px; min-height: 0px; white-space: pre-wrap; color: rgb(60, 60, 60); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 17px; font-weight: bold; text-align: left;  }
+.S8 { border-left: 1.20481932163239px solid rgb(233, 233, 233); border-right: 1.20481932163239px solid rgb(233, 233, 233); border-top: 1.20481932163239px solid rgb(233, 233, 233); border-bottom: 1.20481932163239px solid rgb(233, 233, 233); border-radius: 4px 4px 0px 0px; padding: 6px 45px 4px 13px; line-height: 17.2339992523193px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px;  }
+.S9 { color: rgb(64, 64, 64); padding: 10px 0px 6px 17px; background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px; overflow-x: hidden; line-height: 17.2339992523193px;  }
+.embeddedOutputsErrorElement {min-height: 18px; max-height: 250px; overflow: auto;}
+.embeddedOutputsErrorElement.inlineElement {}
+.embeddedOutputsErrorElement.rightPaneElement {}
+.embeddedOutputsWarningElement{min-height: 18px; max-height: 250px; overflow: auto;}
+.embeddedOutputsWarningElement.inlineElement {}
+.embeddedOutputsWarningElement.rightPaneElement {}
+.diagnosticMessage-wrapper {font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 12px;}
+.diagnosticMessage-wrapper.diagnosticMessage-warningType {color: rgb(255,100,0);}
+.diagnosticMessage-wrapper.diagnosticMessage-warningType a {color: rgb(255,100,0); text-decoration: underline;}
+.diagnosticMessage-wrapper.diagnosticMessage-errorType {color: rgb(230,0,0);}
+.diagnosticMessage-wrapper.diagnosticMessage-errorType a {color: rgb(230,0,0); text-decoration: underline;}
+.diagnosticMessage-wrapper .diagnosticMessage-messagePart {white-space: pre-wrap;}
+.diagnosticMessage-wrapper .diagnosticMessage-stackPart {white-space: pre;}
+.embeddedOutputsTextElement,.embeddedOutputsVariableStringElement {white-space: pre; word-wrap: initial; min-height: 18px; max-height: 250px; overflow: auto;}
+.textElement,.rtcDataTipElement .textElement {padding-top: 3px;}
+.embeddedOutputsTextElement.inlineElement,.embeddedOutputsVariableStringElement.inlineElement {}
+.inlineElement .textElement {}
+.embeddedOutputsTextElement.rightPaneElement,.embeddedOutputsVariableStringElement.rightPaneElement {min-height: 16px;}
+.rightPaneElement .textElement {padding-top: 2px; padding-left: 9px;}
+.S10 { margin: 2px 10px 9px 4px; padding: 0px; line-height: 21px; min-height: 0px; white-space: pre-wrap; color: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 14px; font-weight: normal; text-align: center;  }
+.S11 { border-left: 1.20481932163239px solid rgb(233, 233, 233); border-right: 1.20481932163239px solid rgb(233, 233, 233); border-top: 1.20481932163239px solid rgb(233, 233, 233); border-bottom: 0px none rgb(0, 0, 0); border-radius: 4px 4px 0px 0px; padding: 6px 45px 0px 13px; line-height: 17.2339992523193px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px;  }
+.S12 { border-left: 1.20481932163239px solid rgb(233, 233, 233); border-right: 1.20481932163239px solid rgb(233, 233, 233); border-top: 0px none rgb(0, 0, 0); border-bottom: 0px none rgb(0, 0, 0); border-radius: 0px; padding: 0px 45px 0px 13px; line-height: 17.2339992523193px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px;  }
+.S13 { border-left: 1.20481932163239px solid rgb(233, 233, 233); border-right: 1.20481932163239px solid rgb(233, 233, 233); border-top: 0px none rgb(0, 0, 0); border-bottom: 1.20481932163239px solid rgb(233, 233, 233); border-radius: 0px; padding: 0px 45px 4px 13px; line-height: 17.2339992523193px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px;  }
+.variableValue { width: 100% !important; }
+.embeddedOutputsMatrixElement,.eoOutputWrapper .matrixElement {min-height: 18px; box-sizing: border-box;}
+.embeddedOutputsMatrixElement .matrixElement,.eoOutputWrapper .matrixElement,.rtcDataTipElement .matrixElement {position: relative;}
+.matrixElement .variableValue,.rtcDataTipElement .matrixElement .variableValue {white-space: pre; display: inline-block; vertical-align: top; overflow: hidden;}
+.embeddedOutputsMatrixElement.inlineElement {}
+.embeddedOutputsMatrixElement.inlineElement .topHeaderWrapper {display: none;}
+.embeddedOutputsMatrixElement.inlineElement .veTable .body {padding-top: 0 !important; max-height: 100px;}
+.inlineElement .matrixElement {max-height: 300px;}
+.embeddedOutputsMatrixElement.rightPaneElement {}
+.rightPaneElement .matrixElement,.rtcDataTipElement .matrixElement {overflow: hidden; padding-left: 9px;}
+.rightPaneElement .matrixElement {margin-bottom: -1px;}
+.embeddedOutputsMatrixElement .matrixElement .valueContainer,.eoOutputWrapper .matrixElement .valueContainer,.rtcDataTipElement .matrixElement .valueContainer {white-space: nowrap; margin-bottom: 3px;}
+.embeddedOutputsMatrixElement .matrixElement .valueContainer .horizontalEllipsis.hide,.embeddedOutputsMatrixElement .matrixElement .verticalEllipsis.hide,.eoOutputWrapper .matrixElement .valueContainer .horizontalEllipsis.hide,.eoOutputWrapper .matrixElement .verticalEllipsis.hide,.rtcDataTipElement .matrixElement .valueContainer .horizontalEllipsis.hide,.rtcDataTipElement .matrixElement .verticalEllipsis.hide {display: none;}
+.embeddedOutputsVariableMatrixElement .matrixElement .valueContainer.hideEllipses .verticalEllipsis, .embeddedOutputsVariableMatrixElement .matrixElement .valueContainer.hideEllipses .horizontalEllipsis {display:none;}
+.embeddedOutputsMatrixElement .matrixElement .valueContainer .horizontalEllipsis,.eoOutputWrapper .matrixElement .valueContainer .horizontalEllipsis {margin-bottom: -3px;}
+.eoOutputWrapper .embeddedOutputsVariableMatrixElement .matrixElement .valueContainer {cursor: default !important;}
+.embeddedOutputsVariableElement {white-space: pre-wrap; word-wrap: break-word; min-height: 18px; max-height: 250px; overflow: auto;}
+.variableElement {}
+.embeddedOutputsVariableElement.inlineElement {}
+.inlineElement .variableElement {}
+.embeddedOutputsVariableElement.rightPaneElement {min-height: 16px;}
+.rightPaneElement .variableElement {padding-top: 2px; padding-left: 9px;}
+.variableNameElement {margin-bottom: 3px; display: inline-block;}
+.matrixElement .horizontalEllipsis,.rtcDataTipElement .matrixElement .horizontalEllipsis {display: inline-block; margin-top: 3px; width: 30px; height: 12px; background-repeat: no-repeat; background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAJCAYAAADO1CeCAAAAJUlEQVR42mP4//8/A70xw0i29BUDFPxnAEtTW37wWDqakIa4pQDvOOG89lHX2gAAAABJRU5ErkJggg==");}
+.matrixElement .verticalEllipsis,.textElement .verticalEllipsis,.rtcDataTipElement .matrixElement .verticalEllipsis,.rtcDataTipElement .textElement .verticalEllipsis {margin-left: 35px; width: 12px; height: 30px; background-repeat: no-repeat; background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAZCAYAAAAIcL+IAAAALklEQVR42mP4//8/AzGYgWyFMECMwv8QddRS+P//KyimlmcGUOFoOI6GI/UVAgDnd8Dd4+NCwgAAAABJRU5ErkJggg==");}</style></head><body><div class = rtcContent><h1  class = 'S0'><span>諸注意事項</span></h1><h2  class = 'S1'><span>本稿の目的と構成</span></h2><div  class = 'S2'><span>本稿の目的は「PCAをデータ分析などの日常業務で使えるようになる」ことです．そのため，以下のように構成しました．</span></div><ul  class = 'S3'><li  class = 'S4'><span>PCAが適用となるデータ（第１章）</span></li><li  class = 'S4'><span>MATLAB statistics and machine learning toolboxをつかったPCA（第２章）</span></li><li  class = 'S4'><span>PCAの数学的背景として「固有値分解」を幾何学的に理解する（第３章～）</span></li></ul><div  class = 'S2'><span>最初１章と２章はおもに，プログラミングの経験があまりない人を念頭においています．現在，PCAはコンピュータ上で比較的簡単に実行できるようになっています．統計分析フリーソフトウェア「R」や，汎用フリープログラミング言語「Python」，数値解析の商用ソフトウェア「MATLAB（ただし，Statistics and Machine Learning Toolboxが必要）」などが使える環境であれば，プログラム（「関数」）にデータを放り込むだけでPCAの解析結果を得ることが出来ます．たとえば，「MATLAB」の「Statistics and Machine Learning Toolbox」にはpca()という関数が準備されており，コマンドウィンドウに</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre;"><span>[coefs, scores, latent] = pca(ratings,</span><span style="color: rgb(160, 32, 240);">'Algorithm'</span><span>,</span><span style="color: rgb(160, 32, 240);">'eig'</span><span>);</span></span></div></div></div><div  class = 'S6'><span>と入力し，実行するだけで，PCAの主要な結果が得られます．しかし，適切に使用するにはPCAとはどのようなものかをある程度理解しておく必要があります．第１章では導入として，どのようなデータに対してPCAが有効なのかを実際のデータを使って解説します．第２章では，実際にpca()関数を使いながら，それぞれのパラメーターの意味を概説していきます．</span></div><div  class = 'S2'><span>第３章以降でPCAの数学的な背景を解説していきます．pca()関数の使い方がわかれば，さまざまなデータを自分で解析できるようになるはずです．しかし，それだけでは太刀打ちできな場合もあります．解説どおりにpca()関数を適用することは出来たけど，得られた結果やその解釈が妥当なのかどうか判断に困ることもあります．そのような場合でも，数学的な背景を理解しておくこと役に立つことがあります．第３章以降では，できるだけ視覚的なイメージでPCAの数学的な背景を解説していきます．PCAの計算方法（アルゴリズム）にはいくつかの方法がありますが，本稿では「分散共分散行列の固有値分解」を採択し，できるだけ幾何学的なイメージに基づいて解説していきます．第４章では「射影ベクトル」を導入し，第５章ではその射影ベクトルをもとに分散共分散行列を導出します．第６章以降で，PCAの数学的な背景として固有値分解の幾何学的解釈を紹介していきます．</span></div><h2  class = 'S1'><span>本稿の特色</span></h2><h3  class = 'S7'><span>データセットを使って具体的に計算しながら説明</span></h3><div  class = 'S2'><span>本稿では，実際のデータをつかって，実際にコードを動かしながらPCAの数学的な背景を説明をしていきます．こうすることで，理論と実践をなるべくスムーズに繋げられるように配慮しています．世の中には，さまざまな解析方法があり，それらの使い方に関する豊富な情報も書籍やインターネットを通じて簡単に手に入るようになりました．また，それらの数学的な背景を解説する優れた参考書も数多く存在しています．しかしながら，それらの理論と実践を繋ぐ努力は多くの場合，読者（解析者）に委ねられているように思います．そのような努力は熟達の過程で必ず求められるものですが，本稿では，理論と実践を繋ぐひとつの方法論としてなるべくたくさんの図を作って，視覚化していくというアプローチを提示します．これは私が個人的に好むやり方ですが，この方法がどなたかの参考になれば幸いです．</span></div><div  class = 'S2'><span>本稿では，MATLAB Statistics and Machine Learning Toolboxに含まれる「米国の都市における生活満足度」に関するデータを利用します．このデータはMATLABのドキュメンテーションでも，PCAの解説に用いられています（「PCA の使用による米国の都市における生活満足度の分析：</span><a href = "https://jp.mathworks.com/help/stats/quality-of-life-in-u-s-cities.html"><span style=' text-decoration: underline;'>https://jp.mathworks.com/help/stats/quality-of-life-in-u-s-cities.html</span></a><span>」）．このドキュメンテーションではPCAの適用例が詳しく紹介されていますが，数学的な背景についてはほとんど触れられていません．本稿において，同じデータセットを使って数学的な背景を解説することで，読者が理論と実践を比較しながら理解を深められるように配慮しました．</span></div><h3  class = 'S7'><span>グラフを多用して数学的な背景を視覚的に理解する</span></h3><div  class = 'S2'><span>PCAは「データの分散をもっともよく説明する方向（ベクトル）を見つける手法」をとして説明されることがあります．そして，その視覚的なイメージとして楕円を用いた説明がよくなされます．一方，PCAの数学的な背景として「PCAはデータの分散共分散行列の固有値分解である」と説明されます．どちらもそのとおりなのですが，なぜ「データの分散共分散行列の固有値分解」が「データの分散をもっともよく説明するする方向（ベクトル）をみつける」ことになるのかについてはまとまった解説はあまり見つけられませんでした．本稿ではその「なぜ」をできるだけ視覚的なイメージを大切にしながら解説していきます．その過程で，PCAの視覚的なイメージは必ずしも楕円だけではなく，分散共分散行列の固有値分解をより正確に描写しているイメージが存在することも紹介します．</span></div><h2  class = 'S1'><span>対象者</span></h2><div  class = 'S2'><span>本稿は</span></div><ul  class = 'S3'><li  class = 'S4'><span>プログラミングをほとんどやったことがないけど，主成分分析を出来るようになりたい</span></li><li  class = 'S4'><span>これまで何らかのプログラミング言語でPCAを使ってきたけど，原理を理解した上で使いたい</span></li></ul><div  class = 'S2'><span>という方を対象に想定しています．そのうえで，下記のような事前知識を想定しています．併せて，参考となりそうなリソースについても紹介します．もし事前知識で心もとないところがあれば参考にしてください．</span></div><h3  class = 'S7'><span>プログラミングに関する事前知識とリソース</span></h3><div  class = 'S2'><span>プログラミングに関しては以下のようなレベルを想定しています．</span></div><ul  class = 'S3'><li  class = 'S4'><span>スカラーやベクトル，行列の四則演算ができる</span></li><li  class = 'S4'><span>計算結果を変数への代入ができる</span></li><li  class = 'S4'><span>わからないことがあればインターネットで検索できる</span></li></ul><div  class = 'S2'><span>最初の２項目に自信がない方は，MATLABのオンラインコース（</span><a href = "https://jp.mathworks.com/learn/tutorials/matlab-onramp.html"><span style=' text-decoration: underline;'>https://jp.mathworks.com/learn/tutorials/matlab-onramp.html</span></a><span style=' text-decoration: underline;'>）</span><span>の受講を強くおすすめします．このコースはインターネット接続さえあればだれでも無料で受講できます．ブラウザ上で動作するため，MATLABのインストールは必要ありません．お時間のない方は最初の６セクションだけでもかまいません．これらの操作はMATLAB以外のプログラミング言語（「R」や「Python」など）でデータ解析を行う際にも基本中の基本となる操作です．また，ひとつの言語で操作方法に慣れておけば，ほかの言語でも類推して使うことが出来ます．前述のオンラインコースで一度，操作になれておいてください．</span></div><div  class = 'S2'><span>また，MATLABのヘルプやドキュメンテーションもぜひ活用してみてください．ヘルプはコマンドラインで簡単に実行できます．たとえば，pca()関数のヘルプを見る場合は，コマンドライン上に以下のように入力し，実行します．</span></div><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S8'><span style="white-space: pre;"><span>help </span><span style="color: rgb(160, 32, 240);">pca</span></span></div><div  class = 'S9'><div class="inlineElement eoOutputWrapper embeddedOutputsTextElement" uid="211A5425" data-testid="output_0" data-width="1323" data-height="220" data-hashorizontaloverflow="false" style="width: 1353.01958084106px; max-height: 261px;"><div class="textElement">pca - 生データの主成分分析
+
+    この MATLAB 関数 は、n 行 p 列のデータ行列 X の主成分係数 (負荷量とも呼ばれます) を返します。
+
+    coeff = pca(X)
+    coeff = pca(X,Name,Value)
+    [coeff,score,latent] = pca(___)
+    [coeff,score,latent,tsquared] = pca(___)
+    [coeff,score,latent,tsquared,explained,mu] = pca(___)
+
+    参考 <a href="https://localhost:31515/static/help/stats/barttest.html">barttest</a>, <a href="https://localhost:31515/static/help/stats/biplot.html">biplot</a>, <a href="https://localhost:31515/static/help/stats/canoncorr.html">canoncorr</a>, <a href="https://localhost:31515/static/help/stats/factoran.html">factoran</a>, <a href="https://localhost:31515/static/help/stats/pcacov.html">pcacov</a>, <a href="https://localhost:31515/static/help/stats/pcares.html">pcares</a>, <a href="https://localhost:31515/static/help/stats/ppca.html">ppca</a>, 
+        <a href="https://localhost:31515/static/help/stats/rotatefactors.html">rotatefactors</a>
+
+    pca のリファレンス ページ
+    pca という名前のその他の関数</div></div></div></div></div><div  class = 'S6'><span>ヘルプを実行すると，MATLABに組み込まれている関数の使い方（構文）が表示されます．関数への値の渡し方やオプションの指定方法，返ってくる出力などがわかります．もっと詳しい使い方を知りたい場合は，ドキュメンテーションが役に立ちます．ドキュメンテーションにアクセスする方法はいくつかありますが，コマンドラインから特定の関数のドキュメンテーションを開くには，下記のようにします．つ</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre;"><span>doc </span><span style="color: rgb(160, 32, 240);">pca</span></span></div></div></div><div  class = 'S6'><span>別ウィンドウで，指定した関数の使い方が記載されたドキュメンテーションが表示されます．ドキュメンテーションには，さきほどの構文のほかに，簡単な解説や，例などが記載されています．ヘルプやドキュメンテーションはMATLABの開発および販売元であるMathWorksにより提供されており，MATLABに関してはもっとも信頼できる一次情報です．積極的な利用を勧めます．MathWorksのインターネットサイトにはヘルプやドキュメンテーションの他に，さまざまなサポート情報が提供されています．より実践的な解説やユーザーコミュニティサイトもありますので，こちらも併せて利用されることをおすすめします.．MATLABサポートには（</span><a href = "https://jp.mathworks.com/support.html?s_tid=gn_supp"><span style=' text-decoration: underline;'>https://jp.mathworks.com/support.html?s_tid=gn_supp</span></a><span>）からアクセスできます．</span></div><div  class = 'S2'><span>ヘルプやドキュメンテーションはMATLABに限らず，さまざまなプログラミング言語で用意されており，もっとも信頼できる情報リソースの一つですが，内容が専門的すぎてわかりずらい場合もあります．そうした場合はインターネット検索も役立つ場合があります．たとえば，「MATALB」と「PCA」というキーワードで検索すると，別のユーザーがまとめたサイトを見つけることができます．インターネット検索はとても強力なツールになりえます．また，ほかのプログラミング言語を使う場合にも同様の経験を活かすことができます．一方で，誤った情報があったり，環境の違いなど（たとえばMacとWindows）で，利用できないものもありますので十分に注意してください．以下に，プログラミングに関する情報交換サイトをいくつか紹介します．これらはユーザー同士が問題や解決策をシェアするサイトです．自身が抱えている問題の解決方法が見つかる場合もありますので，こちらも併せて利用されることをおすすめします．</span></div><ul  class = 'S3'><li  class = 'S4'><span>stack overflow: </span><a href = "https://stackoverflow.com/"><span style=' text-decoration: underline;'>https://stackoverflow.com/</span></a></li><li  class = 'S4'><span>Qiita: </span><a href = "https://qiita.com/"><span style=' text-decoration: underline;'>https://qiita.com/</span></a></li></ul><div  class = 'S2'><span>pca()関数に限らず，プログラミングではこのようなリソースを参照しながらコードを書いていくことが日常茶飯事です．むしろ，プログラミングの必須能力だと言っても過言ではありません．プログラミングでわからないことがあった場合は自分で調べられるようにチャレンジしてみてください．</span></div><h3  class = 'S7'><span>数学に関する事前知識とリソース</span></h3><div  class = 'S2'><span>数学の事前知識としては高校数学程度を想定しています．具体的には，以下のキーワードが理解できていることを想定しています．</span></div><ul  class = 'S3'><li  class = 'S4'><span>二次関数とグラフ（楕円の方程式）</span></li><li  class = 'S4'><span>ベクトルや行列の四則演算</span></li><li  class = 'S4'><span>2x2の行列の行列式の求め方</span></li></ul><div  class = 'S2'><span>もし，これらのキーワードに自信がない場合や，本稿を読み進めるなかであらためて確認したい場合は，下記のサイトをおすすめします．サイト内検索ができて便利です．</span></div><ul  class = 'S3'><li  class = 'S4'><span>高校の美しい数学（</span><a href = "https://mathtrain.jp/"><span style=' text-decoration: underline;'>https://mathtrain.jp/</span></a><span>）</span></li></ul><div  class = 'S2'><span>もし，線形代数についてまとめて復習したい場合は下記の書籍がおすすめです．</span></div><ul  class = 'S3'><li  class = 'S4'><span>プログラミングのための線形代数（</span><a href = "https://www.ohmsha.co.jp/book/9784274065781/"><span style=' text-decoration: underline;'>https://www.ohmsha.co.jp/book/9784274065781/</span></a><span>）</span></li></ul><h2  class = 'S1'><span>凡例</span></h2><h3  class = 'S7'><span>スカラー</span></h3><div  class = 'S2'><span>本稿でスカラーといった場合は1,3,-5などの実数を表すこととします．不特定の数値を表す場合はローマン（</span><span mathmlencoding="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;inline&quot;&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;a&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;b&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;k&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;l&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;m&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;/mrow&gt;&lt;/math&gt;" style="vertical-align:-5px"><img src="data:image/png;base64,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" width="88" height="17" /></span><span>）またはギリシャ文字小文字（</span><span mathmlencoding="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;inline&quot;&gt;&lt;mrow&gt;&lt;mi&gt;α&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;β&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;κ&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;λ&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;μ&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;/mrow&gt;&lt;/math&gt;" style="vertical-align:-5px"><img src="data:image/png;base64,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" width="97" height="17" /></span><span>）を用いることにします．</span></div><h3  class = 'S7'><span>ベクトル</span></h3><div  class = 'S2'><span>本稿でベクトルといった場合は，スカラーを縦または横に並べたものを指します．数値を縦に並べたベクトルを縦ベクトルといい，</span><span mathmlencoding="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;inline&quot;&gt;&lt;mrow&gt;&lt;mrow&gt;&lt;mo&gt;[&lt;/mo&gt;&lt;mtable&gt;&lt;mtr&gt;&lt;mtd&gt;&lt;mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;mtr&gt;&lt;mtd&gt;&lt;mrow&gt;&lt;mn&gt;5&lt;/mn&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;/mtable&gt;&lt;mo&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;/math&gt;" style="vertical-align:-14px"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADUAAABNCAYAAAAGlyzcAAADC0lEQVR4Xu3bO8hVRxAH8J9RsArBIoUWJtgExRBtRa1imoD4KEQEEQJJZURFLSSICRg0PgrxVYiiolgoSIggpElhUAtREERFxMoHxEIQH0EjA3vh8N3Hd0/O5/3OueyB09y7u2f+O/OfndmdnaD/ZxVO9Wg+H5f7H66t5U/4uUv/m1iBO/2MP6GfRqlNgPoNJ/GsQ7/zuFdivJFNv8XsDv3jty8/JKhNZQavALDYNSaz1HfLaqrU4BlU9xnImoq5yeZXlrCZU5lTvW0gcypzaoy8BGq7Tk3G11iJdfinBObagWqB2YIFuJRmvrGgAsQS3Mf3+KrpoMKrTsK/KWrZhngbr6kibVoJYAZVSE5LpTyDWnyzpka4+9q59JZ8WVNZUx1Ck+woKkTpmVOZU5lT7TNQehEsDJE51QROfYIDKTm8mrLfB03NfGdgMZalrLeFI9KPP/A3buDtKABLm/2gFt8SimlrmkHlA4L/s/9WxeYKfbP5ZfPL5jdGZKr7blIVmNlRZEeRHUUVBo1BHpcD2gq7SVV01yjv9xG+wXU87YG6dqC+wNl0ithJ7l+wfZREsVaggq/rsaeLFh6l49NrTcp8P8dxnOlSJhrVnbfwrkmgvsNCrMXzCp6iNuY3FSdwCFFbW+WpDahiZfQV/Inf0+7Rm5IIawFqCo5iaQfhowQ7yrTP4XWf4GoB6uPkwqdjTirfmTsCwA7E+6IPYLUANVLOWGRnpWhkdeHPzdjb9M3MALc8Fex/hodpnYpd2l5PLTVVFDgW5KgkO4ww0w3Y13RQIX/RkRzERrxqUuzXTdYIn4JPR1Io9XIYQLXWsV8RB3K9Tj5qz6mWQlqghoZTExEpx5omRundaDIzRe4ROm3tI7IYd/P7FPuxCMewG48L6MKN78Q0/IAnTYgoYlE9jXlJ2Lh2F44ggtrQULjv29jV5bZcJ4zjrqkQKq7a/ZjOeSOdj+cvXMQF3MV/fWio6FRqWZlZAkNb0w+uqaG8aDl0V2KrmNBA+5bZdh6oYFU+lkFVmb1B9h1KTb0HhHKqXUg1glAAAAAASUVORK5CYII=" width="26.5" height="38.5" /></span><span>のように表します．数値を横に並べたものは横ベクトルといい，</span><span mathmlencoding="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;inline&quot;&gt;&lt;mrow&gt;&lt;mrow&gt;&lt;mo&gt;[&lt;/mo&gt;&lt;mtable&gt;&lt;mtr&gt;&lt;mtd&gt;&lt;mrow&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;mtd&gt;&lt;mrow&gt;&lt;mn&gt;8&lt;/mn&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;/mtable&gt;&lt;mo&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;/math&gt;" style="vertical-align:-5px"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFEAAAAiCAYAAAAnOTVZAAAEH0lEQVRoQ+3aech1YxQF8N+HyBT5QlGmCMkQijKFMoRkHj5DEsqQzGTIEMk8JVNKyCyUMv5BFEpRxpLhD0kyZZ616jl1O869537ec++pt/vU/ec95z5nP+vde6+19rkLzNacEVgw5x1mGxgG4go4Ais1YPQSXpvH2G2LnRrO9z3uw4/1a8NAXFi+sDx+qX3pVjw5j0HcFyfWzrcsfiqJ9fXigHgLLsaH8xiwcY+2YcHiZEwMxGTuYTiwlMJneAF34g38M260E7gvsR2APbEcUl2/4gk80ARKQwwTB3FL3ISN8TaWwhZYET/glNIa/poAQG1b7og78CCuLiWZ76yDK7AejsH7LRtNFMQEczvuxWMD/XNVXI7jSoAH4d22E3d8PbGFCD7FSQgxDK5N8AjewQn4dsTzJwbikjgNb+HFhpLdDI9iAxyKhzoGqW27o3APLsJlDTentG/EXtgHb/YB4prYrWThnw0BpBfdj90Rxnuq7dQdX78Ql+J6nIvfGxg315KF2+PVPkBsO/MaBcTIg5DOJ21f6Ph6wLmt9OlDGlRGFd/SOBwhw2FrYuXcduYqS1PyYcFpM3TILQy8dqmWM/BVCTr6eFH5+9m4DqOIrxcQU+ph7JRwSrqp3Nv+CXO9np59Oq4qGz2H80pm7l/65M24C7/1yc71Zy+BXYp82KgQS/pSGLKPFbmVDLyyPDySK7GEkUM2H4xZIVPJxGVKX4nm2qGGVnrN0Yjn7mMFyJRuSnaVEkBc2AV4HH+PEdRUQKziSK9ZGTHxpxZmzrW4l0iOL8YIuOtb4lBS1rsWEDcdyMqU+rUN84F6DFMFcfDhyc4EH2eQFaJ5vmuEWvZbHel73xWZk953fMnCKisjfwLkqL7dG4g5XwgmbmbnAmh02bRWXFPc1Gpl+lL15VTL1gXcbYo13a8YhmGx9QpiGDINPKw4zDlMCtRjC/NegnzqEiteP9Jr8xGCvIqtVxATROUcpmn9IqDDyNGoGS5HZtVXMjLXU8pP48gR/rlXEKvD7IFpDiHikipLNwzEgJopT1TDs4XB/zMrLMj3CuK6pWRewfljiNouSztZFlkzrJwHQRzmrydezpV0WAt34/Wa5go7x1JtVUz+l10iNMZemSJljpjBQ5N3jn4MMyfGDJPjaKZOLOuXIANSnEDGTplkf15YOZkQ4KLFvhnj0F3fkp6XCdINeA/n4KNCMPkHp8xDevkk7l4kToKMdDkL25VJdtxJptvPFN8cQPtekTgHY+9iBDKc/QMv4+EyvWkbjvTaE/sGsKvnz0DsAMkZiDMQO0Cggy3+dybmlw7X4ONaED+PMfXoIO7etohQz0uswZVXq2eWX0Ys1sv76iVT/TSjHEBvJ+/wwZk95lVrfQ11NbNfhXWA/gzEGYgdINDBFv8CqjUsMmV6azEAAAAASUVORK5CYII=" width="40.5" height="17" /></span><span>のように表します．本稿では単にベクトルといった場合は，とくに断りがない場合を除き縦ベクトルを用います．ベクトルはイタリック小文字（</span><span mathmlencoding="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;inline&quot;&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;italic&quot;&gt;x&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi mathvariant=&quot;italic&quot;&gt;y&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi mathvariant=&quot;italic&quot;&gt;z&lt;/mi&gt;&lt;/mrow&gt;&lt;/math&gt;" style="vertical-align:-5px"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEkAAAAiCAYAAAATQPRFAAAEF0lEQVRoQ+3ZWch9UxgG8N/fFIkLJZFwJyFkjESRMVPJkCHzTJllHjOPpVCSzJEhKUPGckFcmJIhGTO7MCSznlr7azvOOd/a5/xP381e9fWdOu+0n/Wu93nWPov0a14EFs1r0RvoQapogh6kHqQKBCpM+k7qQapAoMKk76QepAoEKkz6TupBqkCgwqTvpClBWh6bYi/siJVxCB4vcVfA6Tgez+BEfFuRc9AkcZJnI2yCtfEGTsAvLeOtcDveLLm+niBXXPJcF2H9Mf7v4Hz8HJtxnbR6CfIHrsZBuKuA8jcux3LYHD/gYHw6QeFLIUCtiHNwJL7Enni1FW9X3Fds98MDE+SKSzYhvhuM8H8Fh+Ld5vva43Y0bsHrBazd8Hkp+p8Jix3mthbuRrrmPFyGJv4S2Bk3FyDTvZOs3bFTif99K0A67BI8hhfbgWtB2rgcs1VxK77DhfhzkirH+CyJC8oDPFk2JLmalSN/Hc7FJxPkDtDH4Gl82PJPN58yauNrQVoN92BbPF+K/2KCImtctsMjZR6kY9O9zdoM+5Rj+VtNsAqbYLA/Ml6yAf/b+FqQlsW1OA7X4yz8XlHAJCbtDcmup3Oz0mUZpi/h2UkCj/DZBnuU7m0TxZx5LUixC5NdiWHHYDHWbBlcgZMLQPn/axm42aSzB1hvmtzr4NTSmSPZshakUPNDWBMfYO9CxdMUOM73gDLAX0A+f1NmYI764uqiVQox5ITMMdmwompASrAbixY6DFviwDKjZgVSQxTRKdmQSIR9cWbpqmnzjmSySUDK1D8DHxdqDOqRA9FIoejopa3xHpp2jXbKDPtpCvYLi92L7YuAjSS4Da8NeYiu+cYyWQ1I6ayIur/Kuc/U36K1g41eaubSutgBFyNskzN+RxGYL+PwAmDXnW8TRYRlyCLMk7raq2u+eZmsBqQN8ShWwvtFQR/b6pJQcL6PXoroynHI4Gu6qJklTa5BQdgFrAzsAPMEjsBXQ5y75guT3VniPIybyikZW9fgTMr8yZGKKr2/UG67uLR2xF6uIOmmfP6slSGSP4o4Wicr9N2wUxeAYhsAch3K/HtuhHOXfO2ua8K1ryDBIlIgf1HeHzVGNYO768M19gFyjYGrRW2s1BVwly6bVqPsx+WL0s5YeLuMkTRBTkAuuQ+WORuZ0WjB/9wNZwVS2OPSMp9ya++6IjmOwmn4scJ5knzxSY5ccUIKV5U3HrnI523H3LVnFiB1Zo8BEKr1S/GbNl+IKgy9XgEmF+f2xXex/4IbVjoJb+GpIhHGNUI2KQwZv/hkd6OF8komR2O+1TXffPGGfj+LTupSSADKTMhQzaU2d6cbBi61XeLNxHahQWpefexS5tc1I6h+Jg9fG3ShQaqtc0HtepAq4O9BqgDpXx105yOiu55KAAAAAElFTkSuQmCC" width="36.5" height="17" /></span><span>）で表します．ベクトルの要素を明示する場合は，</span><span mathmlencoding="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;inline&quot;&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;italic&quot;&gt;x&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow&gt;&lt;mo&gt;[&lt;/mo&gt;&lt;mtable&gt;&lt;mtr&gt;&lt;mtd&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;mtr&gt;&lt;mtd&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;/mtable&gt;&lt;mo&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;/math&gt;" style="vertical-align:-17px"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHMAAABQCAYAAAAqe0p+AAAGsUlEQVR4Xu2dWcitUxjHfwcZ40IhUoZShJAx8xXKXMYc0umYkylz5iJknl1QZoVIIi4QLogLSsKNOSIX5pn+x/PWe3b73Xs9a6+9vvf79vNenfPtNfzX81/Petdaz/AuYnafY4CHRgx/d+CNCuK5BLiyo593gSOBD1NwLEoptEDLiMzrgQeB74eM8Sng4wpj3x/Yakg/+tvWQWYaAyLzXI+w0potVsqNb9Y1M8gsNvfmtiH3zK8M140vNNOxwQgyK0vA0Z175jvaLlHUjS80MzSzxMSb8zbcM78yYje+0MzQzMpzdDrdpcz8TYEjgJOBjQzGK8ANwKvAAcD5wDbAa8D9wCPA7wUgp+BbrpvQzDTNPNhuitYErgF0Bfc3sAZwO/ALcB7wcwESmyaCTIcwPcJaCbgCuAho35eK5LOA44FPHH2nFPXgW9ZeaGaaZkpWG9vF/G62zN4J3GOa+UwKO84yQaZDYG5hAUcB91of75tV5eJC78hB6G58oZnpmilh6x15E3AC8AFwOCBSxz0rAHsBJwKXJ5q0gsxxUm397haW1d0OeBzYzDY9N9pmaFjXUhbtdE8BDgM+d1hp3PhCM32aKXkdDdwNaGf7qZH0dsckUvlVbG8ijd4lyHSom6Ooe+YDWwA3A/fZLnZn4AHgdOCHEX2vZstzkOkgyFPUS6bel9fZEURaps2QvBT0HAs8DPzbASDI9DCTUdZDZrO8yh/nJOBrYC3gNuA44E0jtMvNJMjMIMhTxUOmllctrZcBL7Y62QF4wq76dMXXdUwJMj3MZJRNJbNZXle09+Svrb70t6uAC4Ef7Q730SHLbZCZQZCnSgqZOxqB2sFKI68GXrejiIiUO6au+PaxjuXlp53uHcBXLTBBpoeZjLIpZGY0O7RKkFlKkh3tBJlTFnDN5oPMmtKecl81yVwduAXQOzg13MCNL67z0oWbO7d0rNkPOMOOMDJuP2l20b9GNBpkOiTuFpaj7RJF3fhCM6evmbnEBpkOybmF5Wi7RFE3vtDM0MwSE2/O23DP/MqI3fhCM0MzK8/R6XTnnvnTgdHZqhvfKM2UtUCH3EOBfYF1zD/0WetebhMKVj0NeMms7d9WHvAk3bmFNUlnGXXd+EaRuaEB+NNi/2VNl2Vd5P1jnt26QJbrhKwFMtJ+Nga0AI5KCpE65hLJI9zCSgVXqJwbX+o7U9Z1mXbeMYv6gcAXwDDb3aixBJnpTE+NzO0BLa/rmxf3d+b/Oeo6Kh323JR0C6syTDe+VM3cwByW9gZeNu38svLgSnfnFlZpAAmvJFcCjVQyV7X4ilPNZfAC4I/Kgyvd3cySKdI1S64FXjDN1FI7n5+ZJbPthSZ3Qrnav5fBZGyA0oXmnmwpy+x6ZljVWXIJsCuw2N6h6dD+LxlkpkusOJkKMlVEsAJJFYMo31AdU5roYZ0397Copm/ScfaipFtYlVG78Q1qpv4vT22FeCukWy6Gio9Q3L78RZvzZvPe3NLcDJWVsUQcf015uYVVE5ytYhPtZrcFngbWBj6yGx2FozVat5P9rvOmNPUn4JzW75XHO1F3C55MvR+1lB4EPAZcanEVjdR0fScXfV3dSTv1b8UczsdnwZM5H0nJxRxk5kquh/WCzB6SkgspyMyVXA/rBZk9JCUXUpCZK7ke1gsye0hKLqQUMiMRYq50K9dLIbOBFIkQK5Pj7c5DZiRC9Eq3cnkPmYIWiRArE+Tpzkum2o5EiB4JVyybQ2ZuIsScYbnxpRinc4DMhzpuYdmgvIkQ9wTkOyX/4t+A5yxl2zgDhRtfkOmLNfEmQtSyfCZwl9mHl1p0gMyHsg2PMugHmY4lwS0sZyJE2XxlTlTSJ+Wm1dNepse53rjxhWama6Y3EaLSf29uadraCRJlK5ZmylYsorueIHNKmpmTCHFlwzLoXyySleVLn9dQjvcg00FaCWFNmgixjUGaqbidQ4C3gswCTDocpkokQmwQK9+eXG3WHZJUcXBUscw6eE4RVqlEiA0sabg+jSyvu2ZTVGLlWNZGbIDSN0COeTK0qDRcGx5tfvTpqXFPymRbro1ZJ7PWB8R1UX92R0xrfEB83LRO+H1cqESJ6Oxm9ZMzuSLR9dmMwZhWfVdMTuTDnvanqsYOaZY1c6xwChSQfJUTYhP7zFTb61/vT0UEKC14kSfILCLGzkb0lSHdAj1v3v9NQZ1BdWerq76ULxYloQwyk8SUVUihHjpP6oJ92HOrBWUVi9EJMrN46melILOfvGShCjKzxNbPSkFmP3nJQhVkZomtn5X+A4gYQW+sjhgjAAAAAElFTkSuQmCC" width="57.5" height="40" /></span><span>のようにします．</span><span mathmlencoding="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;inline&quot;&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/math&gt;" style="vertical-align:-6px"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAkCAYAAABxE+FXAAAB1ElEQVRYR+3Wz4tOURzH8dfEwlYpKUWyNgs2fkX+AVmIaZINWZiyIORHfqVsbETMJJIfGzaKLJUaK5Qs7JSFxIaykFL0qfOUpue588x9ZuZa3FN3cX+c8z7n/T3f77lDGmxDDbK18Ebst9pb7fNq4L/acEuwC/sxXDS8xWU8wVqcxFa8w+1yfa+jrNfK1+ERVuAuDuIHFuAM1uAAvtSBdvr0guf5PkzgM3bjBTKpm+Xdq0HA6VsV88UYx048xBFcwBtcwZ+5hGfsjbhf9L/Ep6L726Dg6Vae9wtxvKw499vwfDbA/cDzzXI8wGZcxVH8nGYCCWc25TFcw2S37/vJ8y24U9Rnx+/B4wr4SoxhB1ZhU134UlwvsO1lwGjPBBL/bm0RfuEUzteFJ96Hi/aoXo97WIbTuITfFQbyTW14dF8s1e592XzncAIfMdpLZ5lQbXh0J8eflqLSyenEM6tPCib3U+V6pV0teEf3hrLqr1PUBnijPEsapu530z9j+Gocwl58wFk8KxsovBw2SZ+RAs/uTxFKxUto/m0zhs9W/cg4Lbx2kRkkDI1pT9nOT0eueV15/n5y+iVrkh23yq/W66kHUj8HyyDqK/u28DlTWzVwo9r/ApgzYSVgzymQAAAAAElFTkSuQmCC" width="15.5" height="18" /></span><span>や</span><span mathmlencoding="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;inline&quot;&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/math&gt;" style="vertical-align:-6px"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAkCAYAAABxE+FXAAACUUlEQVRYR+3WS6hNYRQH8N+NgTJSCqUYKBlgwASJTMljICRJyIDII0TihjLwyKM8I3klIu8JiSJKSgbKQCkSBpSE8mrVt2/7Hs7Z595zj2Nwdu3B+b5vff+1/mv9//u0aODT0kBsTfCGsN+kvUn7P2Xgvxq43piBhRieaHiCHbiKEViP8XiKY+n92BnKylU+EucxACewGJ/QDRsxDIvwtjOgWUw58FhfgEN4g5m4i0jqSNp7VAtwxFbqeS8cxHScwypsxmPswa96gsfdY3Aq0X8frxPdH2oFLqo89rtjbao4fk/A7a4ArgY8zvTHaYzFPqzGlwoJDMXSdL4HbmJ3Uke7sGp0Pg7HE/Ux8XNwqQx4tGkXzuA5ZmMWHmIenuXjisD7YH8Cm4JpifZIIPqff3omPwjgO2kj37YN2Jof1ErgEbgy0R5Uj8JJ9ENctA3fc+iDU3LbS9bDmK7gMpbnW1YJPOiOTMPtgq5IphXr8DJRei8HHvvxfi1hJJI6i+sp6R9FJhN0h8avJVPJND0wVR+9De2HyxXJLqt8CS4U9Tyje3Sq+l1JJQF4IK2FDMP38/SXzuJ8TP7bXaW0D8IyzMULbMINfEs3xsdmTZrgWIrpDxMKx2s3yel8X+xNEs2GsC25ommvxU+CwRV4laT3hx3XCzzuDX2HQe0s15Z6gYdSwhdCkp/L0VcP8PCDqdiSZiLDjv5PwlH8rNbbO9L3ITiMB3ifC4w/IfFtCAO6VaTzjgBmZ6O/IcGJZYIvImTX5gv1oL3qxJvgVVPVlQcbSvtv1QJwJV0FBTsAAAAASUVORK5CYII=" width="15.5" height="18" /></span><span>はスカラーです．要素を縦ベクトルで表すことが難しい場合は，</span><span mathmlencoding="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;inline&quot;&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;italic&quot;&gt;x&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msup&gt;&lt;mrow&gt;&lt;mrow&gt;&lt;mo&gt;[&lt;/mo&gt;&lt;mtable&gt;&lt;mtr&gt;&lt;mtd&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;italic&quot;&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;mtd&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;italic&quot;&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;/mtable&gt;&lt;mo&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;italic&quot;&gt;T&lt;/mi&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;/math&gt;" style="vertical-align:-7px"><img src="data:image/png;base64,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" width="83.5" height="19.5" /></span><span>のように表します．ここで上付き文字の</span><span style="font-family: STIXGeneral, STIXGeneral-webfont, serif; font-style: italic; font-weight: normal; color: rgb(0, 0, 0);">T</span><span>は転置を表し，</span><span mathmlencoding="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;inline&quot;&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mrow&gt;&lt;mrow&gt;&lt;mo&gt;[&lt;/mo&gt;&lt;mtable&gt;&lt;mtr&gt;&lt;mtd&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;italic&quot;&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;mtd&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;italic&quot;&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;/mtable&gt;&lt;mo&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;italic&quot;&gt;T&lt;/mi&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow&gt;&lt;mo&gt;[&lt;/mo&gt;&lt;mtable&gt;&lt;mtr&gt;&lt;mtd&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;mtr&gt;&lt;mtd&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;/mtable&gt;&lt;mo&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;/math&gt;" style="vertical-align:-17px"><img src="data:image/png;base64,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" width="104.5" height="40" /></span><span>です．</span></div><h3  class = 'S7'><span>位置ベクトルと基底ベクトル</span></h3><div  class = 'S2'><span>ベクトルはある座標空間での位置として解釈することができます．ベクトルがある座標空間での位置を表すことを明示する場合には，そのベクトルをとくに位置ベクトルと呼びます．位置ベクトルが示す位置をグラフの中で示す場合は，座標点をローマン大文字で表します（</span><span mathmlencoding="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;inline&quot;&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;X&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;Y&lt;/mi&gt;&lt;/mrow&gt;&lt;/math&gt;" style="vertical-align:-5px"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD4AAAAiCAYAAAAH1WqkAAADy0lEQVRoQ+2YWahNYRTHfxcZIx6ECC+SROGBQjLkAREyzxkzZUrmIUNSUkSmyBQyRYbIkEI8yVDIgyFCHpQhkdC/1u5u39377H3u3ufcbuesut063/etb/3XWnut/7dKKFApKVDcFIEXWuSLEbeItwLmA/2AFk4WPAdOA0/s/y9bbwyMBwYA3X1nrgPngf3AtywzSnYsBkYAdZ2zJ4G7wHHgg7PWxewYCLSztdfAJWAr8MLbHxbxhsAGYKpP8SpgXQYAbQEZVRuYBVwG/mQJ2L9dtvU0x3lBuA+MAl5G6B0MnAHOmS3v3P2ZUr0RsBsYZIcEajrwOeBS6Zlr2TIBuJUAsAteQHdZ5L8C4wxQ2BVVgdVAX2AS8DRoY9Q33gY4AHS2w7r0KPDXUdYD2AusAY4FrCfxQzVgLbDMlNw08GWiaOtdzebZwNWwi6OA69xIYI95XKnmetFzzllgC/A7CcqQs6oj+4D+tr7Roure1cCy9A2wHPiZBHgtYDMgD0p2WuH5Dnifg75lfQafcgDaU6msOmhF9z0wFrjhu8/73IbZ2qtMtsSJuM63BI4ASiOJUv4EsABQIQn9llJ0hFJ+IbDJdF4Epvgqe3uzUdmgip9R4gKXEhW5w5byD61qD7XKn1Yxi7LXLbgrzRHqJNutbaoNKhtTA+4WGVXYGTkoZlE2+1NePXoi0AxYZK0usIq7SrOJuM42tairv0rmAdtSruJRwNWu9Imp7kiUffWBFSEdJ1BftsDdVJPHxwB3oqxNeV0ESxxD9UVyCJgDfIl7TzbA65iXOxn1U1WViB2pon+Me2lK++RwFVxJFKssc2Vc4NqnCqreKGYm3u7vq0ty2MPD/JQX4EHMrJd5vAkQ1FdTCmyompwD95jZbYcNqcor0t7DJYpKpu2InAL3ipmMDvqOXSopypqRKqaIPmfAa9jTtFsEM9Mr6JTv9TQtA3MS/a0JiAMk5fQ5AV4FGG28fGZEfxQYPfKVEZKgh4x+97/01P4mW5EsbxIsBURPJXq96c99NYbqDqrqftAi+sOBZxHWaQKjB4QnQQMAf4S0T3RTw47Yxvr01zOKqnslLm+PdKYLXCMbTV00RvJEEbwGXADu+X6vDoirdwT0InJHVe7IpzWwA+htOkRANOb6EWll6QaNloYAfYAOzjm1WI26HjijsUD1cft4FrbF2qpINU8Q8ViXZNpUEcDFANfblORRYgTlVJBv4Or9emC8rYBX3X8uyidwtTENJB8DVxJOYMsZ59Jj+QSe2Ng0FRSBp+nNyqCrGPHKEKU0bfwHyLnOI8fnoqwAAAAASUVORK5CYII=" width="31" height="17" /></span><span>）．また，その座標空間の座標軸を表すベクトルは特別なベクトルとして基底ベクトルと呼ぶことにします．位置ベクトルと基底ベクトルを区別したいときには，位置ベクトルをイタリック小文字</span><span mathmlencoding="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;inline&quot;&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;italic&quot;&gt;x&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi mathvariant=&quot;italic&quot;&gt;y&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi mathvariant=&quot;italic&quot;&gt;z&lt;/mi&gt;&lt;/mrow&gt;&lt;/math&gt;" style="vertical-align:-5px"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEkAAAAiCAYAAAATQPRFAAAEF0lEQVRoQ+3ZWch9UxgG8N/fFIkLJZFwJyFkjESRMVPJkCHzTJllHjOPpVCSzJEhKUPGckFcmJIhGTO7MCSznlr7azvOOd/a5/xP381e9fWdOu+0n/Wu93nWPov0a14EFs1r0RvoQapogh6kHqQKBCpM+k7qQapAoMKk76QepAoEKkz6TupBqkCgwqTvpClBWh6bYi/siJVxCB4vcVfA6Tgez+BEfFuRc9AkcZJnI2yCtfEGTsAvLeOtcDveLLm+niBXXPJcF2H9Mf7v4Hz8HJtxnbR6CfIHrsZBuKuA8jcux3LYHD/gYHw6QeFLIUCtiHNwJL7Enni1FW9X3Fds98MDE+SKSzYhvhuM8H8Fh+Ld5vva43Y0bsHrBazd8Hkp+p8Jix3mthbuRrrmPFyGJv4S2Bk3FyDTvZOs3bFTif99K0A67BI8hhfbgWtB2rgcs1VxK77DhfhzkirH+CyJC8oDPFk2JLmalSN/Hc7FJxPkDtDH4Gl82PJPN58yauNrQVoN92BbPF+K/2KCImtctsMjZR6kY9O9zdoM+5Rj+VtNsAqbYLA/Ml6yAf/b+FqQlsW1OA7X4yz8XlHAJCbtDcmup3Oz0mUZpi/h2UkCj/DZBnuU7m0TxZx5LUixC5NdiWHHYDHWbBlcgZMLQPn/axm42aSzB1hvmtzr4NTSmSPZshakUPNDWBMfYO9CxdMUOM73gDLAX0A+f1NmYI764uqiVQox5ITMMdmwompASrAbixY6DFviwDKjZgVSQxTRKdmQSIR9cWbpqmnzjmSySUDK1D8DHxdqDOqRA9FIoejopa3xHpp2jXbKDPtpCvYLi92L7YuAjSS4Da8NeYiu+cYyWQ1I6ayIur/Kuc/U36K1g41eaubSutgBFyNskzN+RxGYL+PwAmDXnW8TRYRlyCLMk7raq2u+eZmsBqQN8ShWwvtFQR/b6pJQcL6PXoroynHI4Gu6qJklTa5BQdgFrAzsAPMEjsBXQ5y75guT3VniPIybyikZW9fgTMr8yZGKKr2/UG67uLR2xF6uIOmmfP6slSGSP4o4Wicr9N2wUxeAYhsAch3K/HtuhHOXfO2ua8K1ryDBIlIgf1HeHzVGNYO768M19gFyjYGrRW2s1BVwly6bVqPsx+WL0s5YeLuMkTRBTkAuuQ+WORuZ0WjB/9wNZwVS2OPSMp9ya++6IjmOwmn4scJ5knzxSY5ccUIKV5U3HrnI523H3LVnFiB1Zo8BEKr1S/GbNl+IKgy9XgEmF+f2xXex/4IbVjoJb+GpIhHGNUI2KQwZv/hkd6OF8komR2O+1TXffPGGfj+LTupSSADKTMhQzaU2d6cbBi61XeLNxHahQWpefexS5tc1I6h+Jg9fG3ShQaqtc0HtepAq4O9BqgDpXx105yOiu55KAAAAAElFTkSuQmCC" width="36.5" height="17" /></span><span>．基底ベクトルを</span><span mathmlencoding="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;inline&quot;&gt;&lt;mrow&gt;&lt;mover accent=&quot;true&quot;&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;italic&quot;&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mo&gt;→&lt;/mo&gt;&lt;/mrow&gt;&lt;/mover&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mover accent=&quot;true&quot;&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;italic&quot;&gt;y&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mo&gt;→&lt;/mo&gt;&lt;/mrow&gt;&lt;/mover&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mover accent=&quot;true&quot;&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;italic&quot;&gt;z&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mo&gt;→&lt;/mo&gt;&lt;/mrow&gt;&lt;/mover&gt;&lt;/mrow&gt;&lt;/math&gt;" style="vertical-align:-5px"><img src="data:image/png;base64,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" width="57" height="26.5" /></span><span>のように表します．</span></div><h3  class = 'S7'><span>ベクトルの内積</span></h3><div  class = 'S2'><span>本稿では，ふたつのベクトル</span><span mathmlencoding="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;inline&quot;&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;italic&quot;&gt;x&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow&gt;&lt;mo&gt;[&lt;/mo&gt;&lt;mtable&gt;&lt;mtr&gt;&lt;mtd&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;mtr&gt;&lt;mtd&gt;&lt;mrow&gt;&lt;mo&gt;⋮&lt;/mo&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;mtr&gt;&lt;mtd&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;n&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;/mtable&gt;&lt;mo&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;/math&gt;" style="vertical-align:-27px"><img src="data:image/png;base64,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" width="61.5" height="64" /></span><span>および</span><span mathmlencoding="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;inline&quot;&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;italic&quot;&gt;y&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow&gt;&lt;mo&gt;[&lt;/mo&gt;&lt;mtable&gt;&lt;mtr&gt;&lt;mtd&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;y&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;mtr&gt;&lt;mtd&gt;&lt;mrow&gt;&lt;mo&gt;⋮&lt;/mo&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;mtr&gt;&lt;mtd&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;y&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;n&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;/mtable&gt;&lt;mo&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;/math&gt;" style="vertical-align:-27px"><img src="data:image/png;base64,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" width="62" height="64" /></span><span>の内積を以下のように定義します．</span></div><div  class = 'S10'><span mathmlencoding="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;italic&quot;&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;italic&quot;&gt;T&lt;/mi&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;mi mathvariant=&quot;italic&quot;&gt;y&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow&gt;&lt;mo&gt;[&lt;/mo&gt;&lt;mtable&gt;&lt;mtr&gt;&lt;mtd&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;mtd&gt;&lt;mrow&gt;&lt;mo&gt;⋯&lt;/mo&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;mtd&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;n&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;/mtable&gt;&lt;mo&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mo&gt;[&lt;/mo&gt;&lt;mtable&gt;&lt;mtr&gt;&lt;mtd&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;y&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;mtr&gt;&lt;mtd&gt;&lt;mrow&gt;&lt;mo&gt;⋮&lt;/mo&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;mtr&gt;&lt;mtd&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;y&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;n&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;/mtable&gt;&lt;mo&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow&gt;&lt;munderover&gt;&lt;mrow&gt;&lt;mo&gt;∑&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;italic&quot;&gt;i&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;italic&quot;&gt;n&lt;/mi&gt;&lt;/mrow&gt;&lt;/munderover&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;italic&quot;&gt;i&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;msub&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;y&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;i&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;/math&gt;" style="vertical-align:-27px"><img src="data:image/png;base64,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" width="214.5" height="64" /></span></div><div  class = 'S2'><span>また，内積を丸かっこを使って以下のように表すことにします．</span></div><div  class = 'S10'><span mathmlencoding="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;mrow&gt;&lt;mrow&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;italic&quot;&gt;x&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi mathvariant=&quot;italic&quot;&gt;y&lt;/mi&gt;&lt;/mrow&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msup&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;italic&quot;&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;italic&quot;&gt;T&lt;/mi&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;mi mathvariant=&quot;italic&quot;&gt;y&lt;/mi&gt;&lt;/mrow&gt;&lt;/math&gt;" style="vertical-align:-5px"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJkAAAAkCAYAAACaCJgRAAAIgUlEQVR4Xu2cZ6il1RWGn4kxatSIDSuowYIIGrtG7L23xGiiIlixmxhbjBXRFCv2gmBLJBqNIthixYq9oGIXrNHYW9Qoj7P2sOfMOV8583333Hvn7D+XuXefXdZ+91rvetc+M4FhG1qgZQtMaHn84fBDCzAE2RAErVtgCLLWTTycYAiyaQcDCwFXAAsAdwDPAmsDGwDXAvcDywCbAdcA+wEfNWGeuiCbCVgduAv4ookFjOAYPwijPgr8dwTnHS1TrQ/8EvgD8B9gNuBC4BfANgGsHwKHAR8DZwLfNLH4OiCbGzgSOBd4ponJBzCGt/h3wOnAqwOYf1BTes4HAHcCXjLb0sBVwGfAr4Dn4vfbAW+FI2lkvVVBNg9wDHDGGAZYMph7OXQaBFonYH4DXAZc0hEajVZ6sP81gjColF066Z8iZv8N+LapyQc4zmrA9hEaPh3gOgY19Y+Ak4CDgAObDI3dNlTFk3kYa0WYGS8HMh1wSIQKvfN4uDh1ADsXcGkQfc9Xjt1aKwPZfMAFwJ/bXkhrO+w98CLAOXF5nh7A/IOccnng+sgwdwJeb3MxZSDbFVgT2CcyjjbXMtJj682OB74Gjm0qkxrpTfQ5356RwJkAyU+/7HOcSh8rAllKcW8Fzqs02tjrZFov0HYAXh57y+9rxXLsUwGBtiNweV+j1PhQEch0qVcHQVaoG49tUeDvwHHAdeNxg132lETZ2eNsn2h730UgE+k7A78ex5pS8tZyMkPmtJAA6L1vBq4MGvTeoECW+MpiwG7AhxUW4s34eajKZqNWBNRiHo7Pzhsew2zmIuAI4PMK43Z28SYuB+hplwWWipDnmKm5fsVH+cZfIzzIvTpbSuXNtsYS71SZXzxKQJsEb1aSUMuUX1nd2Cr+7R7l1vcA2uVo4I/AifGzTNWfFVgxbL0CsATwOLAvkKsNykKegZ7RktTbydi9PNmPQ6x0AWopVcAgID+IcsX5UcJJG/EQT45xvEmG3z36rI3JKVyfmz0FWDlKIhry/diYhpVrKVMIcoH9Qg9Aa/A1wmNbbqna5gw+s2HVD/ToJ9+tauM0hAfvpVWZl1edDTwfJaIng2NuC2gHEzc550vARnH5vKh3h/75APBuwR4EtPP9JEpSuwNvBogfzD63KaCOal/traf8vvUCWTLgIxXRnq8xecHDgRuAvUPw+1eUNabyTCb7+Jah9/jLjeO2pg4zA78PI+tR3+gxseu0rJKXVqqscZAgy9eXykNecg9X4GkXL0/TuubCUSXQazn+CRnF0Ht6BmcBAvGWqiDTxeoR6rYtAEHlrdK1KvZZjG2a86jjWRZZr8umXbMeyrBh0bdXmUQACsa6IKtrk7b654VuX08ILPfbhvaVh9sbATW23Ata3za6WOOeVBsu82T9giy/XZ21sSaNnW/aYm/OH92bYegV4J8Fk451kOWRw9cTvqqQ2LfV1g168gmweca5nW8lwAK7Lz0maW9lIOsnXDqZSYBlC+P0b4N4t7XplC0lTpJScr2cXli3Lofo1fy74aWIt7W19qbG1Qsrxdw7AmrA/MFFTe72yjRUwX5URK1/5xtrkvjn484QWZ0ZSD/Eto7xk+5jZpuLi3qoGSPjKRpPkMkx7N96Ol9nYzX6rhL0xKSok5vWGKZS17y4np+tiZj8W9VgMi7YC2T9SBj5ChMhN9PwFWYR8a60s4JOuYKdslkzL72YbrvIi6XPJsnDt1VV22gh/kYND9sHibbcu1TdS91+6ZlQOtt3Qi65HZjMizlwkRjrQCKzrhi7ZGgwklAPfZYRuF1yLwmnIXr/yG7MJstKJimsyz1da502GkCmvOAjTD22pFutr+3IoY1SgV1eJgfUmRiy1SWnkLuKQCZ5N86bjnoIVZqygaKgJFwV3UNXm0m3S6P4rlxtxvfjzq/+YvPf/WafZpG++pSTKL5KSDV+0s16rT3tUfFwihtYZcMD7rMOYCavxzaL9hFiHjl+CswBPNTwOgW03xcwq98l6IbaaNd5ikAmYHznrQxhQbUbANRGTKFV97+Kg/1/eBX3ZchSh/J2eeiGUT2A49oUCX3O7U3wRYDG6kfbSTVIVXA9WFK4y2yrt9ZIls+KwmrZOCP1d8O7XssKjBxI76v8YtKTMnqpgrxM8dmarH3MsJtsrkFx3Uin3cSHkaRr9aDsqY9fMJBM52p6vtik8gowXzHooVTZE1D8vEV2U2t1FYVCQeffcy7lmPbpl7TmWpFEXm/arYyUrz1dosfiWXm/XrTJwysaS4+vtzAsefFtemA9uM3Qb1ln6/DoevG/tCCApzUmiqLgrnTk2XZtZSBz4T7ss1yguNrZvE0qvNYQ/emmBEtqulV/59euLg70p28KObdk1QeRZoi2fp+eJMAuWLbhbG1qOhbFNVAbwmXT4JNqyDf19lIRBdf7OiKMpSRV+JyIt3V5jAKerWd2W9Fmy0DmZ6196cksOJdxnH4Nay1Sl6twW5X/5XN5GQS5YTnd7KK1CErdu33lncNWzwJJ6J4+HEdh1KgCMtN7BVVbz7hbb41T9DYjNb57S+t+odQ9eMOVH6qUruwvF9T7Wv5o9VXoVNpltH7c1xg+cDi4ynlVAZkb9eb7rRY5l1pIky7Yr6jp4iWS/XyfU09bpyBs+i1XlLfloX20HuhoW1ft86oKsgQ0iaZlm5saAppVfT2YGaZPUcqaYP9ZfAP6xXhXVgcwAsyUX5ljCLAya0+UmHyvZzZpsmGypBamNPVU+ccn9qgDMvsrWQiM1ypkb1XXUKef3NCQaPLg/98gUEzTq/y3A4Z9dSPXPgyR1awuwP4BSGfSC4/TOoripSPVBVnpgC13WDUryLpZFf0hYNozenq64+tb1QEjQE+potcyxhrI2jPncOTWLDAEWWumHQ6cLPAdJ9vZNBpLVvMAAAAASUVORK5CYII=" width="76.5" height="18" /></span></div><h3  class = 'S7'><span>行列</span></h3><div  class = 'S2'><span>行列はイタリック大文字</span><span mathmlencoding="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;inline&quot;&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;italic&quot;&gt;X&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi mathvariant=&quot;italic&quot;&gt;Y&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi mathvariant=&quot;italic&quot;&gt;Z&lt;/mi&gt;&lt;/mrow&gt;&lt;/math&gt;" style="vertical-align:-5px"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF0AAAAiCAYAAAA9BdXXAAAFO0lEQVRoQ+2ZachuUxTHfxeRTHFDSD5JEkL4YB4ylMyS8VJESIZCZMqQlDGElDnzVKbMEiE+GEoi8sGUIWMyRb/b2rdtv897nrPPe97nlJ798Zy911r7v9f+r2EvYDomjsCCiWucKmQK+gBOMAV9CvoACAygssnTFwKLgH2B7QrbHgceA+4GfgOWAw4GDgV2z+a+ApwGvNVxb5sCRwJHAauFjJ8B9T8H3BP6lwb2AHYu5t4OnAV81VF/WrYR8ACwYQc5lwPnAn+ktW3oxc3eBBwYi+4ETgTcfDm2DECWB84BbgZ+72BoueQw4K74eC9wHPDTCLnqvSr+nw1c2bN+D9k9vQ/8APxV2LACIMgnxHcdU1u/zue1Ad35uwCPACsBTwNHAN8WCpcBTg+wjw8v/KcHwBWxAXAfoOe/BHgIX4yQneZ9Epv9pgf96SCVdWncrFFi0/4vi5/vAIcAH5ST24K+FnAHsGt4+H7A85kw5ajgRuAS4IoRXjCX/XvY18dhe8N2A14vBAqOXuZtO3rUZjsasF7s6Uzg8wYZUpu3Uay0cVbHawu6804NMNV7LXBGdnV3AOTPJ+L7rx032LRM/dKFww1JeWmkQ78AOBZ4uUf9GwNrFE5WipfrbwW2jh/GkVkdry3oysqDyRvh2Z9GcFGhwWoGf/W4+W2Ap4LiBNxDMIg7/KcNgi7v9kVrbcxfMxxgn5h8wzjHqwHdDMXre3IIPyaCZvI4g2vT9WuzgaY5a0e2tCPwWmRKnwFp0x9HPOkjcLe1teRxndF491GTgBrQlbM/8FAIfBH4Dli3Zw6dzd5lAYOUHu6Q1wVfR1hnnm/ZKJvyOGbM0QFMscdSWy3oeUDVkNaK2rrOmHl56nhR0IvXus/A2dZUKc06xUDbGDhLgbWglwFVLzMfL/PVtobXztsEeBBYPxZO+tCTvSWPGzTFoRW11YKu0j2BJ0N7HlBrAewyfxXglqxQOyUyqUkGzlYFUJ+cXqZGyj48rlkXEGvX5MHUYGWV/G6tkDnM10lNJK7OnK6a2mo8PV0p9b0AXBOKbwNOAuYjNy/xydNGacYM6sc5gFi7NNUjicc99GdqhbQFPV2pLSJo2XdIFeqX0RR7s1Z5h/l5gWQTyep3UtRSVQDNlV5SLmrpby7+Nix+/MgrVHsuNprmE4C8FZBSxmc7HFyXJatGAXRQLB5bAAErRmdxSXcxKR7n6U3l9VbAo9FrsM1qC1avn6+RN73y4mi+9CW5ZQFkq0Naa2oXm1rbHDOjmdGYawLdfztFE2tUeS3lXBf9aw08AHi4AYGlALOPP4FfOiC1d/TwXVq2AdqI66K/SwGUDsm9SoF/l8Y1gZ6ChgXA+bPk4nmxUjbBcl25t1hIWNhIR23z+7Ia9WHE9W1HV/3WBfbv5fM2BZB4SsM25my8jaS/UaD7TcBt03qlbVla8o8a22dlr9Ri+mhmUw5foTy89Kpkr9mXpg9borZ5tE3Ty43ltoG87eiivyyAZuscitfK0Q7RLpt+72W9oRk2lqBb6V0I7BXdPBf4aOBp23NJDxc+JgigKZP96zS+j2ctOd5Hj3S19DTzWzkuPbttC7zagFp6grPBZQAzTUvDw9IeK9L74xWn6QBq9XuzvI22r7sMb6GHNCOIKmxcIO2icNya1SMWnFfh6eNk1vwfWv8goEtX0tLFFZxeA+q4uUPrnzjocnJ6R/3PY+04pHr6P7T+xduYJL1sFjHAvkUfD8a15zC0/iX2ThL0WpD+t/OnoA9wtFPQp6APgMAAKqeePgDo/wJ4tTAyWk/tSgAAAABJRU5ErkJggg==" width="46.5" height="17" /></span><span>で表します．</span></div><h2  class = 'S1'><span>動作環境</span></h2><h3  class = 'S7'><span>toolboxなど</span></h3><div  class = 'S2'><span>このLive scriptのすべてのコードを実行させるためには，MATLAB本体の他に，以下のtoolbox（MathWorksツールボックスまたはコミュニティツールボックス）が必要です．必要に応じて，アドオンエクスプローラーより入手してください．</span></div><ul  class = 'S3'><li  class = 'S4'><span>Arrow3 (*)</span></li><li  class = 'S4'><span>Statistical and Machine Leraning toolbox</span></li></ul><div  class = 'S2'><span>(*) Alberto Comin (2018). </span><span>NeurNetRegr</span><span> (</span><a href = "https://www.mathworks.com/matlabcentral/fileexchange/69084-neurnetregr"><span style=' text-decoration: underline;'>https://</span><span style=' text-decoration: underline;'>www.mathworks.com/</span><span style=' text-decoration: underline;'>matlabcentral/fileexchange/</span><span style=' text-decoration: underline;'>69084-neurnetregr</span></a><span>), MATLAB Central File Exchange. </span><span>Retrieved</span><span> October 12, 2018.</span></div><h2  class = 'S1'><span>データセットの導入</span></h2><div  class = 'S2'><span>解説を始める前に，本稿で具体例として利用するデータを概説します．利用するデータセットは，「米国大都市圏の生活満足度」をまとめたものです．MATLAB Statistics and Machine Learningに付属の"cities.mat"というファイルに保存されています．MathWorksのサイトにはこのデータセットを使ったPCAの解説ページ（</span><a href = "https://jp.mathworks.com/help/stats/quality-of-life-in-u-s-cities.html"><span style=' text-decoration: underline;'>https://jp.mathworks.com/help/stats/quality-of-life-in-u-s-cities.html</span></a><span>）がありますので，そちらも参考にしてみてください．それではデータセットを読み込み，その内容を表示させます．</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S11'><span style="white-space: pre;"><span>clear; </span><span style="color: rgb(34, 139, 34);">% clears workspace</span></span></div></div><div class="inlineWrapper"><div  class = 'S12'><span style="white-space: pre;"><span>close </span><span style="color: rgb(160, 32, 240);">all</span><span>; </span><span style="color: rgb(34, 139, 34);">% closes all figures</span></span></div></div><div class="inlineWrapper"><div  class = 'S12'><span style="white-space: pre;"><span>clc; </span><span style="color: rgb(34, 139, 34);">% clears comand window</span></span></div></div><div class="inlineWrapper"><div  class = 'S12'><span style="white-space: pre;"><span>load </span><span style="color: rgb(160, 32, 240);">cities.mat </span><span style="color: rgb(34, 139, 34);">% loads the data file</span></span></div></div><div class="inlineWrapper outputs"><div  class = 'S13'><span style="white-space: pre;"><span>whos </span><span style="color: rgb(34, 139, 34);">% displays variables loaded</span></span></div><div  class = 'S9'><div class="inlineElement eoOutputWrapper embeddedOutputsTextElement" uid="5BD46C77" data-testid="output_1" data-width="1323" data-height="75" data-hashorizontaloverflow="false" style="width: 1353.01958084106px; max-height: 261px;"><div class="textElement">  Name              Size            Bytes  Class     Attributes
+
+  categories        9x14              252  char                
+  names           329x43            28294  char                
+  ratings         329x9             23688  double              </div></div></div></div></div><div  class = 'S6'><span>このデータセットには３つのデータ（変数）が内包されています．categories, names, ratingsです．以下，ひとつずつデータの内容を表示します．</span></div><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S8'><span style="white-space: pre;"><span>categories </span><span style="color: rgb(34, 139, 34);">% displays contents of a variable named "categories"</span></span></div><div  class = 'S9'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableStringElement" uid="8F1F5AD9" data-testid="output_2" data-width="1323" data-height="150" data-hashorizontaloverflow="false" style="width: 1353.01958084106px; max-height: 261px;"><div class="textElement"><div><span class="variableNameElement">categories = <span class="headerElement">9×14 の char 配列</span></span></div><div>    'climate       '
+    'housing       '
+    'health        '
+    'crime         '
+    'transportation'
+    'education     '
+    'arts          '
+    'recreation    '
+    'economics     '
+</div></div></div></div></div></div><div  class = 'S6'><span>categoriesには「気候」「住宅」「健康」など９つのカテゴリー名が含まれています．生活満足度はこれら９つの項目ごとに数値化されています．</span></div><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S8'><span style="white-space: pre;"><span>names </span><span style="color: rgb(34, 139, 34);">% displays contents of the "names"</span></span></div><div  class = 'S9'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableStringElement scrollableOutput" uid="45BB56AC" data-testid="output_3" data-width="1323" data-height="4776" data-hashorizontaloverflow="false" style="width: 1353.01958084106px; max-height: 261px;"><div class="textElement"><div><span class="variableNameElement">names = <span class="headerElement">329×43 の char 配列</span></span></div><div>    'Abilene, TX                                '
+    'Akron, OH                                  '
+    'Albany, GA                                 '
+    'Albany-Troy, NY                            '
+    'Albuquerque, NM                            '
+    'Alexandria, LA                             '
+    'Allentown,Bethlehem, PA-NJ                 '
+    'Alton, Granite City, IL                    '
+    'Altoona, PA                                '
+    'Amarillo, TX                               '
+    'Anaheim-Santa Ana, CA                      '
+    'Anchorage, AK                              '
+    'Anderson, IN                               '
+    'Anderson, SC                               '
+    'Ann Arbor, MI                              '
+    'Anniston, AL                               '
+    'Appleton-Oshkosh-Neenah, WI                '
+    'Asheville, NC                              '
+    'Athens, GA                                 '
+    'Atlanta, GA                                '
+    'Atlantic City, NJ                          '
+    'Augusta, GA-SC                             '
+    'Aurora-Elgin, IL                           '
+    'Austin, TX                                 '
+    'Bakersfield, CA                            '
+    'Baltimore, MD                              '
+    'Bangor, ME                                 '
+    'Baton Rouge, LA                            '
+    'Battle Creek, MI                           '
+    'Beaumont-Port Arthur, TX                   '
+    'Beaver County, PA                          '
+    'Bellingham, WA                             '
+    'Benton Harbor, MI                          '
+    'Bergen-Passaic, NJ                         '
+    'Billings, MT                               '
+    'Biloxi-Gulfport, MS                        '
+    'Binghampton, NY                            '
+    'Birmingham, AL                             '
+    'Bismarck, ND                               '
+    'Bloomington, IN                            '
+    'Bloomington-Normal, IL                     '
+    'Boise City, ID                             '
+    'Boston, MA                                 '
+    'Boulder-Longmont, CO                       '
+    'Bradenton, FL                              '
+    'Brazoria, TX                               '
+    'Bremerton, WA                              '
+    'Bridgeport-Milford, CT                     '
+    'Bristol, CT                                '
+    'Brockton, MA                               '
+    'Brownsville-Harlington, TX                 '
+    'Bryan-College Station, TX                  '
+    'Buffalo, NY                                '
+    'Burlington, NC                             '
+    'Burlington, VT                             '
+    'Canton, OH                                 '
+    'Casper, WY                                 '
+    'Cedar Rapids, IA                           '
+    'Champaign-Urbana-Rantoul, IL               '
+    'Charleston, SC                             '
+    'Charleston, WV                             '
+    'Charlotte-Gastonia-Rock Hill, NC-SC        '
+    'Charlottesville, VA                        '
+    'Chattanooga, TN-GA                         '
+    'Chicago, IL                                '
+    'Chico, CA                                  '
+    'Cincinnati, OH-KY-IN                       '
+    'Clarksville-Hopkinsville, TN-KY            '
+    'Cleveland, OH                              '
+    'Colorado Springs, CO                       '
+    'Columbia, MO                               '
+    'Columbia, SC                               '
+    'Columbus, GA-AL                            '
+    'Columbus, OH                               '
+    'Corpus Christi, TX                         '
+    'Cumberland, MD-WV                          '
+    'Dallas, TX                                 '
+    'Danbury, CT                                '
+    'Danville, VA                               '
+    'Davenport-Rock Island-Moline, IA-IL        '
+    'Dayton-Springfield, OH                     '
+    'Daytona Beach, FL                          '
+    'Decatur, IL                                '
+    'Denver, CO                                 '
+    'Des Moines, IA                             '
+    'Detroit, MI                                '
+    'Dothgan, AL                                '
+    'Dubuque, IA                                '
+    'Duluth, MN-WI                              '
+    'East St. Louis-Belleville, IL              '
+    'Eau Claire, WI                             '
+    'El Paso, TX                                '
+    'Elkhart-Goshen, IN                         '
+    'Elmira, NY                                 '
+    'Enid, OK                                   '
+    'Erie, PA                                   '
+    'Eugene-Springfield, OR                     '
+    'Evansville, IN-KY                          '
+    'Fall River, MA-RI                          '
+    'Fargo-Moorhead, ND-MN                      '
+    'Fayetteville, NC                           '
+    'Fayetteville, AR                           '
+    'Fitchburg-Leominster, MA                   '
+    'Flint, MI                                  '
+    'Florence, AL                               '
+    'Florence, SC                               '
+    'Fort Collins-Loveland, CO                  '
+    'Fort Lauderdale-Hollywood-Pompano Beach, FL'
+    'Fort Myers, FL                             '
+    'Fort Pierce, FL                            '
+    'Fort Smith, AR-OK                          '
+    'Fort Walton Beach, FL                      '
+    'Fort Wayne, IN                             '
+    'Fort Worth-Arlington, TX                   '
+    'Fresno, CA                                 '
+    'Gadsden, AL                                '
+    'Gainesville, FL                            '
+    'Galveston-Texas City, TX                   '
+    'Gary-Hammond, IN                           '
+    'Glens Falls, NY                            '
+    'Grand Forks, ND                            '
+    'Grand Rapids, MI                           '
+    'Great Falls, MT                            '
+    'Greeley, CO                                '
+    'Green Bay, WI                              '
+    'Greensboro-Winston-Salem-High Point, NC    '
+    'Greenville-Spartanburg, SC                 '
+    'Hagerstown, MD                             '
+    'Hamilton-Middletown, OH                    '
+    'Harrisburg-Lebanon-Carlisle, PA            '
+    'Hartford, CT                               '
+    'Hickory, NC                                '
+    'Honolulu, HI                               '
+    'Houma-Thibodaux, LA                        '
+    'Houston, TX                                '
+    'Huntington-Ashland, WV-KY-OH               '
+    'Huntsville, AL                             '
+    'Indianapolis, IN                           '
+    'Iowa City, IA                              '
+    'Jackson, MI                                '
+    'Jackson, MS                                '
+    'Jacksonville, FL                           '
+    'Jacksonville, NC                           '
+    'Janesville-Beloit, WI                      '
+    'Jersey City, NJ                            '
+    'Johnson City-Kingsport-Bristol, TN-VA      '
+    'Johnstown, PA                              '
+    'Joliet, IL                                 '
+    'Joplin, MO                                 '
+    'Kalamazoo, MI                              '
+    'Kankakee, IL                               '
+    'Kansas City, KS                            '
+    'Kansas City, MO                            '
+    'Kenosha, WI                                '
+    'Kileen-Temple, TX                          '
+    'Knoxville, TN                              '
+    'Kokomo, IN                                 '
+    'La Crosse, WI                              '
+    'Lafayette, IN                              '
+    'Lafayette, LA                              '
+    'Lake Charles, LA                           '
+    'Lake County, IL                            '
+    'Lakeland-Winter Haven, FL                  '
+    'Lancaster, PA                              '
+    'Lansing-East Lansing, MI                   '
+    'Laredo, TX                                 '
+    'Las Cruces, NM                             '
+    'Las Vegas, NV                              '
+    'Lawrence, KS                               '
+    'Lawrence-Haverhill, MA-NH                  '
+    'Lawton, OK                                 '
+    'Lewiston-Auburn, ME                        '
+    'Lexington-Fayette, KY                      '
+    'Lima, OH                                   '
+    'Lincoln, NE                                '
+    'Little Rock, North Little Rock, AR         '
+    'Longview-Marshall, TX                      '
+    'Lorain-Elyria, OH                          '
+    'Los Angeles, Long Beach, CA                '
+    'Louisville, KY-IN                          '
+    'Lowell, MA-NH                              '
+    'Lubbock, TX                                '
+    'Lynchburg, VA                              '
+    'Macon, Warner Robbins, GA                  '
+    'Madison, WI                                '
+    'Manchester, NH                             '
+    'Mansfield, OH                              '
+    'McAllen-Edinburg-Mission, TX               '
+    'Medford, OR                                '
+    'Melbourne-Titusville-Palm Bay, FL          '
+    'Memphis, TN-AR-MS                          '
+    'Miami-Hialeah, FL                          '
+    'Middlesex-Somerset, Hunterdon, NJ          '
+    'Middletown, CT                             '
+    'Midland, TX                                '
+    'Milwaukee, WI                              '
+    'Minneapolis-St. Paul, MN-WI                '
+    'Mobile, AL                                 '
+    'Modesto, CA                                '
+    'Monmouth-Ocean, NJ                         '
+    'Monroe, LA                                 '
+    'Montgomery, AL                             '
+    'Muncie, IN                                 '
+    'Muskegon, MI                               '
+    'Nashua, NH                                 '
+    'Nashville, TN                              '
+    'Nassua-Suffolk, NY                         '
+    'New Bedsford, MA                           '
+    'New Britain, CT                            '
+    'New Haven-Meriden, CT                      '
+    'New London-Norwich, CT-RI                  '
+    'New Orleans, LA                            '
+    'New York, NY                               '
+    'Newark, NJ                                 '
+    'Niagara Falls, NY                          '
+    'Norfolk-Virginia Beach-Newport News, VA    '
+    'Norwalk, CT                                '
+    'Oakland, CA                                '
+    'Ocala, FL                                  '
+    'Odessa, TX                                 '
+    'Oklahoma City, OK                          '
+    'Olympia, WA                                '
+    'Omaha, NE-IA                               '
+    'Orange County, NY                          '
+    'Orlando, FL                                '
+    'Owensboro, KY                              '
+    'Oxnard-Ventura, CA                         '
+    'Panama City, FL                            '
+    'Parkerburg-Marietta, WV-OH                 '
+    'Pascagoula, MS                             '
+    'Pawtucket-Woonsocket-Attleboro, RI-MA      '
+    'Pensacola, FL                              '
+    'Peoria, IL                                 '
+    'Philadelphia, PA-NJ                        '
+    'Phoenix, AZ                                '
+    'Pine Bluff, AR                             '
+    'Pittsburgh, PA                             '
+    'Pittsfield, MA                             '
+    'Portland, ME                               '
+    'Portland, OR                               '
+    'Portsmouth-Dover-Rochester, NH-ME          '
+    'Poughkeepsie, NY                           '
+    'Providence, RI                             '
+    'Provo-Orem, UT                             '
+    'Pueblo, CO                                 '
+    'Racine, WI                                 '
+    'Raleigh-Durham, NC                         '
+    'Reading, PA                                '
+    'Redding, CA                                '
+    'Reno, NV                                   '
+    'Richland-Kinnewick-Pasco, WA               '
+    'Richmond-Petersburg, VA                    '
+    'Riverside-San Bernardino, CA               '
+    'Roanoke, VA                                '
+    'Rochester, MN                              '
+    'Rochester, NY                              '
+    'Rockford, IL                               '
+    'Sacramento, CA                             '
+    'Saginaw-Bay City-Midland, MI               '
+    'St. Cloud, MN                              '
+    'St. Joseph, MO                             '
+    'St. Louis, MO-IL                           '
+    'Salem, OR                                  '
+    'Salem, MA                                  '
+    'Salinas-Seaside-Monterey, CA               '
+    'Salt Lake City-Ogden, UT                   '
+    'San Angelo, TX                             '
+    'San Antonio, TX                            '
+    'San Diego, CA                              '
+    'San Francisco, CA                          '
+    'San Jose, CA                               '
+    'Santa Barbara-Santa Maria-Lompoc, CA       '
+    'Santa Cruz, CA                             '
+    'Santa Rosa-Petaluma, CA                    '
+    'Sarasota, FL                               '
+    'Savannah, GA                               '
+    'Scranton-Wilkes Barre, PA                  '
+    'Seattle, WA                                '
+    'Sharon, PA                                 '
+    'Sheboygan, WI                              '
+    'Sherman-Denison, TX                        '
+    'Shreveport, LA                             '
+    'Sioux City, IA-NE                          '
+    'Sioux Falls, SD                            '
+    'South Bend-Mishawaka, IN                   '
+    'Spokane, WA                                '
+    'Springfield, IL                            '
+    'Springfield, MA                            '
+    'Springfield, MO                            '
+    'Stamford, CT                               '
+    'State College, PA                          '
+    'Steubenville-Weirton, OH-WV                '
+    'Stockton, CA                               '
+    'Syracuse, NY                               '
+    'Tacoma, WA                                 '
+    'Tallahassee, FL                            '
+    'Tampa-St. Petersburg-Clearwater, FL        '
+    'Terre Haute, IN                            '
+    'Texarkana, TX-Texarkana, AR                '
+    'Toledo, OH                                 '
+    'Topeka, KS                                 '
+    'Trenton, NJ                                '
+    'Tuscon, AZ                                 '
+    'Tulsa, OK                                  '
+    'Tuscaloosa, AL                             '
+    'Tyler, TX                                  '
+    'Utica-Rome, NY                             '
+    'Vallejo-Fairfield-Napa, CA                 '
+    'Vancouver, WA                              '
+    'Victoria, TX                               '
+    'Vineland-Millville-Bridgeton, NJ           '
+    'Visalia-Tulare-Porterville, CA             '
+    'Waco, TX                                   '
+    'Washington, DC-MD-VA                       '
+    'Materbury, CT                              '
+    'Waterloo-Cedar Falls, IA                   '
+    'Wausau, WI                                 '
+    'West Palm Beach-Boca Raton-Delray Beach, FL'
+    'Wheeling, WV-OH                            '
+    'Wichita, KS                                '
+    'Wichita Falls, TX                          '
+    'Williamsport, PA                           '
+    'Wilmington, DE-NJ-MD                       '
+    'Wilmington, NC                             '
+    'Worcester, MA                              '
+    'Yakima, WA                                 '
+    'York, PA                                   '
+    'Youngstown-Warren, OH                      '
+    'Yuba City, CA                              '
+</div></div></div></div></div></div><div  class = 'S6'><span>namesには調査の対象となった米国３２９都市の名前と州の略称が入っています．</span></div><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S8'><span style="white-space: pre;"><span>ratings </span><span style="color: rgb(34, 139, 34);">% displays contents of the "ratings"</span></span></div><div  class = 'S9'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableMatrixElement" uid="23AA17F3" data-testid="output_4" data-width="1323" style="width: 1353.01958084106px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="matrixElement veSpecifier saveLoad" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="veVariableName variableNameElement double" style="width: 1323px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><span style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">ratings = </span><span class="veVariableValueSummary veMetaSummary" style="white-space: normal; font-style: normal; color: rgb(179, 179, 179); font-size: 12px;">329×9</span></div><div class="valueContainer" data-layout="{&quot;columnWidth&quot;:80,&quot;totalColumns&quot;:&quot;9&quot;,&quot;totalRows&quot;:&quot;329&quot;,&quot;charsPerColumn&quot;:12}" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="variableValue" style="width: 722px; white-space: pre; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;">         521        6200         237         923        4031        2757         996        1405        7633
+         575        8138        1656         886        4883        2438        5564        2632        4350
+         468        7339         618         970        2531        2560         237         859        5250
+         476        7908        1431         610        6883        3399        4655        1617        5864
+         659        8393        1853        1483        6558        3026        4496        2612        5727
+         520        5819         640         727        2444        2972         334        1018        5254
+         559        8288         621         514        2881        3144        2333        1117        5097
+         537        6487         965         706        4975        2945        1487        1280        5795
+         561        6191         432         399        4246        2778         256        1210        4230
+         609        6546         669        1073        4902        2852        1235        1109        6241
+</div><div class="horizontalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div><div class="verticalEllipsis" style="white-space: nowrap; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div></div></div></div></div></div></div><div  class = 'S6'><span>最後に，ratingsには米国３２９都市の生活満足度が，９つのカテゴリーについての評価点として保存されています．各行はひとつの都市に対応します．たとえば，一行目はテキサス州アビリーン（Abilene, TX）の生活満足度です．それぞれの列は各項目に対応します．たとえば，一列目は「気候」に関する満足度評価です．したがって，テキサス州アビリーンにおける「気候」に関する満足度は521ということになります．評価点の高さは満足度の高さを意味しており，「犯罪」カテゴリー（４列目）の評価点が高い都市は，犯罪率が低いことを表します．</span></div></div>
+<br>
+<!-- 
+##### SOURCE BEGIN #####
+%% 諸注意事項
+%% 本稿の目的と構成
+% 本稿の目的は「PCAをデータ分析などの日常業務で使えるようになる」ことです．そのため，以下のように構成しました．
+%% 
+% * PCAが適用となるデータ（第１章）
+% * MATLAB statistics and machine learning toolboxをつかったPCA（第２章）
+% * PCAの数学的背景として「固有値分解」を幾何学的に理解する（第３章～）
+%% 
+% 最初１章と２章はおもに，プログラミングの経験があまりない人を念頭においています．現在，PCAはコンピュータ上で比較的簡単に実行できるようになっています．統計分析フリーソフトウェア「R」や，汎用フリープログラミング言語「Python」，数値解析の商用ソフトウェア「MATLAB（ただし，Statistics 
+% and Machine Learning Toolboxが必要）」などが使える環境であれば，プログラム（「関数」）にデータを放り込むだけでPCAの解析結果を得ることが出来ます．たとえば，「MATLAB」の「Statistics 
+% and Machine Learning Toolbox」にはpca()という関数が準備されており，コマンドウィンドウに
+
+[coefs, scores, latent] = pca(ratings,'Algorithm','eig');
+%% 
+% と入力し，実行するだけで，PCAの主要な結果が得られます．しかし，適切に使用するにはPCAとはどのようなものかをある程度理解しておく必要があります．第１章では導入として，どのようなデータに対してPCAが有効なのかを実際のデータを使って解説します．第２章では，実際にpca()関数を使いながら，それぞれのパラメーターの意味を概説していきます．
+% 
+% 第３章以降でPCAの数学的な背景を解説していきます．pca()関数の使い方がわかれば，さまざまなデータを自分で解析できるようになるはずです．しかし，それだけでは太刀打ちできな場合もあります．解説どおりにpca()関数を適用することは出来たけど，得られた結果やその解釈が妥当なのかどうか判断に困ることもあります．そのような場合でも，数学的な背景を理解しておくこと役に立つことがあります．第３章以降では，できるだけ視覚的なイメージでPCAの数学的な背景を解説していきます．PCAの計算方法（アルゴリズム）にはいくつかの方法がありますが，本稿では「分散共分散行列の固有値分解」を採択し，できるだけ幾何学的なイメージに基づいて解説していきます．第４章では「射影ベクトル」を導入し，第５章ではその射影ベクトルをもとに分散共分散行列を導出します．第６章以降で，PCAの数学的な背景として固有値分解の幾何学的解釈を紹介していきます．
+%% 本稿の特色
+% データセットを使って具体的に計算しながら説明
+% 本稿では，実際のデータをつかって，実際にコードを動かしながらPCAの数学的な背景を説明をしていきます．こうすることで，理論と実践をなるべくスムーズに繋げられるように配慮しています．世の中には，さまざまな解析方法があり，それらの使い方に関する豊富な情報も書籍やインターネットを通じて簡単に手に入るようになりました．また，それらの数学的な背景を解説する優れた参考書も数多く存在しています．しかしながら，それらの理論と実践を繋ぐ努力は多くの場合，読者（解析者）に委ねられているように思います．そのような努力は熟達の過程で必ず求められるものですが，本稿では，理論と実践を繋ぐひとつの方法論としてなるべくたくさんの図を作って，視覚化していくというアプローチを提示します．これは私が個人的に好むやり方ですが，この方法がどなたかの参考になれば幸いです．
+% 
+% 本稿では，MATLAB Statistics and Machine Learning Toolboxに含まれる「米国の都市における生活満足度」に関するデータを利用します．このデータはMATLABのドキュメンテーションでも，PCAの解説に用いられています（「PCA 
+% の使用による米国の都市における生活満足度の分析：<https://jp.mathworks.com/help/stats/quality-of-life-in-u-s-cities.html 
+% https://jp.mathworks.com/help/stats/quality-of-life-in-u-s-cities.html>」）．このドキュメンテーションではPCAの適用例が詳しく紹介されていますが，数学的な背景についてはほとんど触れられていません．本稿において，同じデータセットを使って数学的な背景を解説することで，読者が理論と実践を比較しながら理解を深められるように配慮しました．
+% グラフを多用して数学的な背景を視覚的に理解する
+% PCAは「データの分散をもっともよく説明する方向（ベクトル）を見つける手法」をとして説明されることがあります．そして，その視覚的なイメージとして楕円を用いた説明がよくなされます．一方，PCAの数学的な背景として「PCAはデータの分散共分散行列の固有値分解である」と説明されます．どちらもそのとおりなのですが，なぜ「データの分散共分散行列の固有値分解」が「データの分散をもっともよく説明するする方向（ベクトル）をみつける」ことになるのかについてはまとまった解説はあまり見つけられませんでした．本稿ではその「なぜ」をできるだけ視覚的なイメージを大切にしながら解説していきます．その過程で，PCAの視覚的なイメージは必ずしも楕円だけではなく，分散共分散行列の固有値分解をより正確に描写しているイメージが存在することも紹介します．
+%% 対象者
+% 本稿は
+%% 
+% * プログラミングをほとんどやったことがないけど，主成分分析を出来るようになりたい
+% * これまで何らかのプログラミング言語でPCAを使ってきたけど，原理を理解した上で使いたい
+%% 
+% という方を対象に想定しています．そのうえで，下記のような事前知識を想定しています．併せて，参考となりそうなリソースについても紹介します．もし事前知識で心もとないところがあれば参考にしてください．
+% プログラミングに関する事前知識とリソース
+% プログラミングに関しては以下のようなレベルを想定しています．
+%% 
+% * スカラーやベクトル，行列の四則演算ができる
+% * 計算結果を変数への代入ができる
+% * わからないことがあればインターネットで検索できる
+%% 
+% 最初の２項目に自信がない方は，MATLABのオンラインコース（<https://jp.mathworks.com/learn/tutorials/matlab-onramp.html 
+% https://jp.mathworks.com/learn/tutorials/matlab-onramp.html>）の受講を強くおすすめします．このコースはインターネット接続さえあればだれでも無料で受講できます．ブラウザ上で動作するため，MATLABのインストールは必要ありません．お時間のない方は最初の６セクションだけでもかまいません．これらの操作はMATLAB以外のプログラミング言語（「R」や「Python」など）でデータ解析を行う際にも基本中の基本となる操作です．また，ひとつの言語で操作方法に慣れておけば，ほかの言語でも類推して使うことが出来ます．前述のオンラインコースで一度，操作になれておいてください．
+% 
+% また，MATLABのヘルプやドキュメンテーションもぜひ活用してみてください．ヘルプはコマンドラインで簡単に実行できます．たとえば，pca()関数のヘルプを見る場合は，コマンドライン上に以下のように入力し，実行します．
+
+help pca
+%% 
+% ヘルプを実行すると，MATLABに組み込まれている関数の使い方（構文）が表示されます．関数への値の渡し方やオプションの指定方法，返ってくる出力などがわかります．もっと詳しい使い方を知りたい場合は，ドキュメンテーションが役に立ちます．ドキュメンテーションにアクセスする方法はいくつかありますが，コマンドラインから特定の関数のドキュメンテーションを開くには，下記のようにします．つ
+
+doc pca
+%% 
+% 別ウィンドウで，指定した関数の使い方が記載されたドキュメンテーションが表示されます．ドキュメンテーションには，さきほどの構文のほかに，簡単な解説や，例などが記載されています．ヘルプやドキュメンテーションはMATLABの開発および販売元であるMathWorksにより提供されており，MATLABに関してはもっとも信頼できる一次情報です．積極的な利用を勧めます．MathWorksのインターネットサイトにはヘルプやドキュメンテーションの他に，さまざまなサポート情報が提供されています．より実践的な解説やユーザーコミュニティサイトもありますので，こちらも併せて利用されることをおすすめします.．MATLABサポートには（<https://jp.mathworks.com/support.html?s_tid=gn_supp 
+% https://jp.mathworks.com/support.html?s_tid=gn_supp>）からアクセスできます．
+% 
+% ヘルプやドキュメンテーションはMATLABに限らず，さまざまなプログラミング言語で用意されており，もっとも信頼できる情報リソースの一つですが，内容が専門的すぎてわかりずらい場合もあります．そうした場合はインターネット検索も役立つ場合があります．たとえば，「MATALB」と「PCA」というキーワードで検索すると，別のユーザーがまとめたサイトを見つけることができます．インターネット検索はとても強力なツールになりえます．また，ほかのプログラミング言語を使う場合にも同様の経験を活かすことができます．一方で，誤った情報があったり，環境の違いなど（たとえばMacとWindows）で，利用できないものもありますので十分に注意してください．以下に，プログラミングに関する情報交換サイトをいくつか紹介します．これらはユーザー同士が問題や解決策をシェアするサイトです．自身が抱えている問題の解決方法が見つかる場合もありますので，こちらも併せて利用されることをおすすめします．
+%% 
+% * stack overflow: <https://stackoverflow.com/ https://stackoverflow.com/>
+% * Qiita: <https://qiita.com/ https://qiita.com/>
+%% 
+% pca()関数に限らず，プログラミングではこのようなリソースを参照しながらコードを書いていくことが日常茶飯事です．むしろ，プログラミングの必須能力だと言っても過言ではありません．プログラミングでわからないことがあった場合は自分で調べられるようにチャレンジしてみてください．
+% 数学に関する事前知識とリソース
+% 数学の事前知識としては高校数学程度を想定しています．具体的には，以下のキーワードが理解できていることを想定しています．
+%% 
+% * 二次関数とグラフ（楕円の方程式）
+% * ベクトルや行列の四則演算
+% * 2x2の行列の行列式の求め方
+%% 
+% もし，これらのキーワードに自信がない場合や，本稿を読み進めるなかであらためて確認したい場合は，下記のサイトをおすすめします．サイト内検索ができて便利です．
+%% 
+% * 高校の美しい数学（<https://mathtrain.jp/ https://mathtrain.jp/>）
+%% 
+% もし，線形代数についてまとめて復習したい場合は下記の書籍がおすすめです．
+%% 
+% * プログラミングのための線形代数（<https://www.ohmsha.co.jp/book/9784274065781/ https://www.ohmsha.co.jp/book/9784274065781/>）
+%% 凡例
+% スカラー
+% 本稿でスカラーといった場合は1,3,-5などの実数を表すこととします．不特定の数値を表す場合はローマン（$\mathrm{a},\mathrm{b},\mathrm{k},\mathrm{l},\mathrm{m},\ldotp 
+% \ldotp \ldotp$）またはギリシャ文字小文字（$\alpha ,\beta ,\kappa ,\lambda ,\mu ,\ldotp \ldotp 
+% \ldotp \ldotp$）を用いることにします．
+% ベクトル
+% 本稿でベクトルといった場合は，スカラーを縦または横に並べたものを指します．数値を縦に並べたベクトルを縦ベクトルといい，$\left\lbrack \begin{array}{c}1\\5\end{array}\right\rbrack$のように表します．数値を横に並べたものは横ベクトルといい，$\left\lbrack 
+% \begin{array}{cc}3 & 8\end{array}\right\rbrack$のように表します．本稿では単にベクトルといった場合は，とくに断りがない場合を除き縦ベクトルを用います．ベクトルはイタリック小文字（$x,y,z$）で表します．ベクトルの要素を明示する場合は，$x=\left\lbrack 
+% \begin{array}{c}{\mathrm{x}}_1 \\{\mathrm{x}}_2 \end{array}\right\rbrack$のようにします．${\mathrm{x}}_1$や${\mathrm{x}}_2$はスカラーです．要素を縦ベクトルで表すことが難しい場合は，$x={\left\lbrack 
+% \begin{array}{cc}x_1  & x_2 \end{array}\right\rbrack }^T$のように表します．ここで上付き文字の$T$は転置を表し，${\left\lbrack 
+% \begin{array}{cc}x_1  & x_2 \end{array}\right\rbrack }^T =\left\lbrack \begin{array}{c}{\mathrm{x}}_1 
+% \\{\mathrm{x}}_2 \end{array}\right\rbrack$です．
+% 位置ベクトルと基底ベクトル
+% ベクトルはある座標空間での位置として解釈することができます．ベクトルがある座標空間での位置を表すことを明示する場合には，そのベクトルをとくに位置ベクトルと呼びます．位置ベクトルが示す位置をグラフの中で示す場合は，座標点をローマン大文字で表します（$\mathrm{X},\mathrm{Y}$）．また，その座標空間の座標軸を表すベクトルは特別なベクトルとして基底ベクトルと呼ぶことにします．位置ベクトルと基底ベクトルを区別したいときには，位置ベクトルをイタリック小文字$x,y,z$．基底ベクトルを$\overrightarrow{x} 
+% ,\overrightarrow{y} ,\overrightarrow{z}$のように表します．
+% ベクトルの内積
+% 本稿では，ふたつのベクトル$x=\left\lbrack \begin{array}{c}{\mathrm{x}}_1 \\\vdots \\{\mathrm{x}}_{\mathrm{n}} 
+% \end{array}\right\rbrack$および$y=\left\lbrack \begin{array}{c}{\mathrm{y}}_1 \\\vdots 
+% \\{\mathrm{y}}_{\mathrm{n}} \end{array}\right\rbrack$の内積を以下のように定義します．
+% 
+% $$x^T y=\left\lbrack \begin{array}{ccc}{\mathrm{x}}_1  & \cdots  & {\mathrm{x}}_{\mathrm{n}} 
+% \end{array}\right\rbrack \left\lbrack \begin{array}{c}{\mathrm{y}}_1 \\\vdots 
+% \\{\mathrm{y}}_{\mathrm{n}} \end{array}\right\rbrack =\sum_{i=1}^n {\mathrm{x}}_i 
+% {\mathrm{y}}_{\mathrm{i}}$$
+% 
+% また，内積を丸かっこを使って以下のように表すことにします．
+% 
+% $$\left(x,y\right)=x^T y$$
+% 行列
+% 行列はイタリック大文字$X,Y,Z$で表します．
+%% 動作環境
+% toolboxなど
+% このLive scriptのすべてのコードを実行させるためには，MATLAB本体の他に，以下のtoolbox（MathWorksツールボックスまたはコミュニティツールボックス）が必要です．必要に応じて，アドオンエクスプローラーより入手してください．
+%% 
+% * Arrow3 (*)
+% * Statistical and Machine Leraning toolbox
+%% 
+% (*) Alberto Comin (2018). NeurNetRegr (<https://www.mathworks.com/matlabcentral/fileexchange/69084-neurnetregr 
+% https://www.mathworks.com/matlabcentral/fileexchange/69084-neurnetregr>), MATLAB 
+% Central File Exchange. Retrieved October 12, 2018.
+%% データセットの導入
+% 解説を始める前に，本稿で具体例として利用するデータを概説します．利用するデータセットは，「米国大都市圏の生活満足度」をまとめたものです．MATLAB 
+% Statistics and Machine Learningに付属の"cities.mat"というファイルに保存されています．MathWorksのサイトにはこのデータセットを使ったPCAの解説ページ（<https://jp.mathworks.com/help/stats/quality-of-life-in-u-s-cities.html 
+% https://jp.mathworks.com/help/stats/quality-of-life-in-u-s-cities.html>）がありますので，そちらも参考にしてみてください．それではデータセットを読み込み，その内容を表示させます．
+
+clear; % clears workspace
+close all; % closes all figures
+clc; % clears comand window
+load cities.mat % loads the data file
+whos % displays variables loaded
+%% 
+% このデータセットには３つのデータ（変数）が内包されています．categories, names, ratingsです．以下，ひとつずつデータの内容を表示します．
+
+categories % displays contents of a variable named "categories"
+%% 
+% categoriesには「気候」「住宅」「健康」など９つのカテゴリー名が含まれています．生活満足度はこれら９つの項目ごとに数値化されています．
+
+names % displays contents of the "names"
+%% 
+% namesには調査の対象となった米国３２９都市の名前と州の略称が入っています．
+
+ratings % displays contents of the "ratings"
+%% 
+% 最後に，ratingsには米国３２９都市の生活満足度が，９つのカテゴリーについての評価点として保存されています．各行はひとつの都市に対応します．たとえば，一行目はテキサス州アビリーン（Abilene, 
+% TX）の生活満足度です．それぞれの列は各項目に対応します．たとえば，一列目は「気候」に関する満足度評価です．したがって，テキサス州アビリーンにおける「気候」に関する満足度は521ということになります．評価点の高さは満足度の高さを意味しており，「犯罪」カテゴリー（４列目）の評価点が高い都市は，犯罪率が低いことを表します．
+##### SOURCE END #####
+--></body></html>
